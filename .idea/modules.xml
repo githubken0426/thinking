@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/thinking.iml" filepath="$PROJECT_DIR$/thinking.iml" />
+      <module fileurl="file://$PROJECT_DIR$/thinking-common/thinking-common.iml" filepath="$PROJECT_DIR$/thinking-common/thinking-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/thinking-concurrent/thinking-concurrent.iml" filepath="$PROJECT_DIR$/thinking-concurrent/thinking-concurrent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/thinking-conf/thinking-conf.iml" filepath="$PROJECT_DIR$/thinking-conf/thinking-conf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/thinking-data-structure/thinking-data-structure.iml" filepath="$PROJECT_DIR$/thinking-data-structure/thinking-data-structure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/thinking-design-pattern/thinking-design-pattern.iml" filepath="$PROJECT_DIR$/thinking-design-pattern/thinking-design-pattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/thinking-python/thinking-python.iml" filepath="$PROJECT_DIR$/thinking-python/thinking-python.iml" />
+      <module fileurl="file://$PROJECT_DIR$/thinking-signature/thinking-signature.iml" filepath="$PROJECT_DIR$/thinking-signature/thinking-signature.iml" />
+      <module fileurl="file://$PROJECT_DIR$/thinking-signature-tool/thinking-signature-tool.iml" filepath="$PROJECT_DIR$/thinking-signature-tool/thinking-signature-tool.iml" />
+      <module fileurl="file://$PROJECT_DIR$/thinking-web/thinking-web.iml" filepath="$PROJECT_DIR$/thinking-web/thinking-web.iml" />
+    </modules>
+  </component>
+</project>

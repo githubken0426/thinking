@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8">
+  <meta name="renderer" content="webkit|ie-comp|ie-stand">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <!--[if lt IE 9]>
+  <script type="text/javascript" th:src="@{/ccps_7_H-ui.3.0/lib/html5shiv.js}"></script>
+  <script type="text/javascript" th:src="@{/ccps_7_H-ui.3.0/lib/respond.min.js}"></script>
+  <![endif]-->
+  <link rel="stylesheet" type="text/css" th:href="@{/ccps_7_H-ui.3.0/static/h-ui/css/H-ui.min.css}" />
+  <link rel="stylesheet" type="text/css" th:href="@{/ccps_7_H-ui.3.0/static/h-ui.admin/css/H-ui.admin.css}"/>
+  <link rel="stylesheet" type="text/css" th:href="@{/ccps_7_H-ui.3.0/lib/Hui-iconfont/1.0.8/iconfont.css}" />
+  <link rel="stylesheet" type="text/css" th:href="@{/ccps_7_H-ui.3.0/static/h-ui.admin/skin/default/skin.css}" id="skin" />
+  <link rel="stylesheet" type="text/css" th:href="@{/ccps_7_H-ui.3.0/static/h-ui.admin/css/style.css}" />
+  <link rel="stylesheet" type="text/css" th:href="@{/kkpager/kkpager_blue.css}" />
+  <!--[if IE 6]>
+  <script type="text/javascript" src="@{/ccps_7_H-ui.3.0/lib/DD_belatedPNG_0.0.8a-min.js}" ></script>
+  <script>DD_belatedPNG.fix('*');</script>
+  <![endif]-->
+  <title>菜品管理</title>
+</head>
+<body>
+<nav class="breadcrumb">
+  <i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;&gt;</span> 菜品管理
+  <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" >
+    <i class="Hui-iconfont">&#xe68f;</i>
+  </a>
+</nav>
+<div class="pd-20">
+<form id="searchForm" action="#" class="layui-form" th:action="@{/goods/list}" method="get">
+    <div class="text-search"> 编号:
+      <input type="text" class="input-text radius" style="width:150px" placeholder="请输入蔬菜编号"
+             th:field="*{goodsSearch.skuCode}"/>
+      所属套餐:
+      <select th:field="*{goodsSearch.setmealId}" class="input-text radius" style="width:150px;display: inline;">
+        <option th:value="-1">请选择...</option>
+        <option th:each="obj: ${setmeals}" th:value="${obj.id}" th:text="${obj.name}"></option>
+      </select>
+      <button type="submit" class="btn btn-success" id="search-button" ><i class="icon-search"></i> 搜蔬菜</button>
+      <input type="hidden" th:field="*{goodsSearch.pno}"/>
+      <input type="hidden" id="goods_id" name="goodsId"/>
+    </div>
+  <div class="cl pd-5 bg-1 bk-gray mt-20">
+    <span class="l">
+		<a href="javascript:void(0);" th:onclick="data_add()" class="btn btn-primary radius">
+          <i class="icon-plus"></i> 新增
+        </a>
+        <a href="javascript:void(0);" th:onclick="data_update()" class="btn btn-secondary radius">
+          <i class="icon-plus"></i> 修改
+        </a>
+	</span>
+  </div>
+  <table class="table table-border table-bordered table-hover table-bg table-sort">
+    <thead>
+      <tr class="text-c">
+        <th width="10"><input type="checkbox" name="" value=""></th>
+        <th width="100">蔬菜编号</th>
+        <th width="150">标题</th>
+        <th width="50">缩略图</th>
+        <th width="50">价格</th>
+        <th width="30">单位</th>
+        <th width="50">定量</th>
+        <th width="50">库存</th>
+        <th width="120">菜品状态</th>
+        <th width="100">创建时间</th>
+        <th width="50">操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="text-c" th:each="obj,state : ${pageInfo.list}">
+        <td>
+          <input type="checkbox" th:value="${obj.id}" name="ids"/>
+        </td>
+        <td class="text-l" title="查看详情">
+          <a class="text-primary" href="javascript:;" th:onclick="'detail('+${obj.id}+')'"  th:text="${obj.skuCode}"></a>
+        </td>
+        <td th:text="${obj.goodsTitle}"></td>
+        <td>
+          <img width="60" class="picture-thumb" th:if="${obj.preview ne null}" th:src="@{'/files/'+${obj.preview}}">
+        </td>
+        <td th:text="${obj.promotionPrice}+'元'"></td>
+        <td>
+          <div th:switch="${obj.goodsUnit}">
+            <span th:case="1" th:text="份"></span>
+            <span th:case="2" th:text="斤"></span>
+            <span th:case="3" th:text="KG"></span>
+          </div>
+        </td>
+        <td>
+          <span th:if="${obj.ration eq 'N'}" th:text="否"></span>
+          <span th:if="${obj.ration eq 'Y'}" th:text="限购+${obj.rationNum}+份"></span>
+        </td>
+        <td th:text="${obj.stock}"></td>
+        <td>
+          <span class="label label-success radius" th:if="${obj.shelves eq 'Y'}" th:text="上架："></span>
+           <span th:if="${obj.shelves eq 'Y'}" th:text="${#dates.format(obj.upTime,'yyyy-MM-dd HH:mm')}"></span>
+          <span class="label label-warning radius" th:if="${obj.shelves eq 'N'}" th:text="下架："></span>
+           <span th:if="${obj.shelves eq 'N'}" th:text="${#dates.format(obj.downTime,'yyyy-MM-dd HH:mm')}"></span>
+        </td>
+        <td th:text="${#dates.format(obj.createTime,'yyyy-MM-dd HH:mm')}"></td>
+        <td>
+          <div th:switch="${obj.shelves}">
+            <a style="text-decoration:none" th:case="Y" th:onclick="'goods_down('+${obj.id}+')'" href="javascript:;" title="下架菜品">
+              <i class="Hui-iconfont"></i>
+            </a>
+            <a style="text-decoration:none" th:case="N" th:onclick="'goods_push('+${obj.id}+')'" href="javascript:;" title="上架菜品">
+              <i class="Hui-iconfont"></i>
+            </a>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+  <div class="pkp">
+    <div id="kkpager"></div>
+  </div>
+</div>
+  <script type="text/javascript" th:src="@{/ccps_7_H-ui.3.0/lib/jquery/1.9.1/jquery.js}"></script>
+  <script type="text/javascript" th:src="@{/layer/layer.js}"></script>
+  <script type="text/javascript" th:src="@{/ccps_7_H-ui.3.0/static/h-ui/js/H-ui.min.js}"></script>
+  <script type="text/javascript" th:src="@{/ccps_7_H-ui.3.0/static/h-ui.admin/js/H-ui.admin.js}"></script> <!--/_footer 作为公共模版分离出去-->
+  <!--请在下方写此页面业务相关的脚本-->
+  <script type="text/javascript" th:src="@{/jQuery/jquery.contextmenu.r2.js}"></script>
+  <script type="text/javascript" th:src="@{/kkpager/kkpager.js}"></script>
+  <a th:href="${#httpServletRequest.getContextPath()}" id="contextPath" style="display: none;"></a>
+  <script th:inline="javascript">
+      function getParameter(name) {
+          var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+          var r = window.location.search.substr(1).match(reg);
+          if (r != null)
+              return unescape(r[2]);
+          return null;
+      }
+
+      $(function(){
+          var totalPage =[[${pageInfo.pages}]] ;// 总页数
+          var pageNo = getParameter('pno');
+          if (!pageNo) {
+              if ([[${currentIndex}]])
+                  pageNo = [[${currentIndex}]];
+              else
+                  pageNo = 1;
+          }
+          //初始化分页控件
+          kkpager.init({
+              pno : pageNo,
+              total : totalPage, //总页码
+              mode: 'click',
+              click : function(n){
+                  this.selectPage(n);
+                  searchPage(n);
+              },lang : {
+                  prePageText : '上一页',
+                  nextPageText : '下一页',
+                  totalPageBeforeText : '共',
+                  totalPageAfterText : '页',
+                  totalRecordsAfterText : '条数据',
+                  gopageBeforeText : '转到',
+                  gopageButtonOkText : '确定',
+                  gopageAfterText : '页',
+                  buttonTipBeforeText : '第',
+                  buttonTipAfterText : '页'
+              }
+          });
+          //生成
+          kkpager.generPageHtml();
+      });
+      function searchPage(n){
+          $("#search_pno").val(n);
+          $("#searchForm").submit();
+      }
+
+      // 新增
+      function data_add(){
+        var contextPath = $("#contextPath").attr("href");
+        $("#searchForm").attr("method", "get");
+        $("#searchForm").attr("action", contextPath + "/goods/page/add");
+        $("#searchForm").submit();
+      }
+      // 修改
+      function data_update(){
+          var ids=$("input[name=ids]:checked");
+          if(ids.length==0){
+              layer.msg("请选择要修改的数据！", {time: 2000});
+              return;
+          }
+          if(ids.length!=1){
+              layer.msg("请选择要一条数据！", {time: 2000});
+              return;
+          }
+          $("#goods_id").val(ids[0].value);
+          var contextPath = $("#contextPath").attr("href");
+          $("#searchForm").attr("method", "get");
+          $("#searchForm").attr("action", contextPath + "/goods/page/update");
+          $("#searchForm").submit();
+      }
+      function detail(id){
+          var contextPath = $("#contextPath").attr("href");
+          $("#goods_id").val(id);
+          $("#searchForm").attr("method", "get");
+          $("#searchForm").attr("action", contextPath + "/goods/detail");
+          $("#searchForm").submit();
+      }
+      function goods_down(id){
+          layer.confirm('确定下架该菜品吗？', {
+              btn: ['确定','取消']
+          }, function(index){
+              $("#goods_id").val(id);
+              var contextPath = $("#contextPath").attr("href");
+              $("#searchForm").attr("method", "get");
+              $("#searchForm").attr("action", contextPath + "/goods/down");
+              $("#searchForm").submit();
+              layer.close(index);
+          });
+      }
+      function goods_push(id){
+          $("#goods_id").val(id);
+          var contextPath = $("#contextPath").attr("href");
+          $("#searchForm").attr("method", "get");
+          $("#searchForm").attr("action", contextPath + "/goods/push");
+          $("#searchForm").submit();
+      }
+      $(function(){
+          if([[${PROMPT_RESULT}]])
+              layer.msg([[${PROMPT_RESULT}]], {time: 2000});
+      });
+
+  </script>
+</body>
+</html>

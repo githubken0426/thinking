@@ -1,0 +1,237 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8">
+  <meta name="renderer" content="webkit|ie-comp|ie-stand">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <!--[if lt IE 9]>
+  <script type="text/javascript" th:src="@{/ccps_7_H-ui.3.0/lib/html5shiv.js}"></script>
+  <script type="text/javascript" th:src="@{/ccps_7_H-ui.3.0/lib/respond.min.js}"></script>
+  <![endif]-->
+  <link rel="stylesheet" type="text/css" th:href="@{/ccps_7_H-ui.3.0/static/h-ui/css/H-ui.min.css}" />
+  <link rel="stylesheet" type="text/css" th:href="@{/ccps_7_H-ui.3.0/static/h-ui.admin/css/H-ui.admin.css}"/>
+  <link rel="stylesheet" type="text/css" th:href="@{/ccps_7_H-ui.3.0/lib/Hui-iconfont/1.0.8/iconfont.css}" />
+  <link rel="stylesheet" type="text/css" th:href="@{/ccps_7_H-ui.3.0/static/h-ui.admin/skin/default/skin.css}" id="skin" />
+  <link rel="stylesheet" type="text/css" th:href="@{/ccps_7_H-ui.3.0/static/h-ui.admin/css/style.css}" />
+  <link rel="stylesheet" type="text/css" th:href="@{/kkpager/kkpager_blue.css}" />
+  <!--[if IE 6]>
+  <script type="text/javascript" src="@{/ccps_7_H-ui.3.0/lib/DD_belatedPNG_0.0.8a-min.js}" ></script>
+  <script>DD_belatedPNG.fix('*');</script>
+  <![endif]-->
+  <title>用户管理</title>
+</head>
+<body>
+<nav class="breadcrumb">
+  <i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;&gt;</span> 用户中心 <span class="c-gray en">&gt;&gt;</span> 用户管理
+  <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" >
+    <i class="Hui-iconfont">&#xe68f;</i>
+  </a>
+</nav>
+<div class="pd-20">
+<form id="searchForm" action="#" class="layui-form" th:action="@{/user/list}" method="get">
+    <div class="text-search"> 用户账号:
+      <input type="text" class="input-text radius" style="width:250px" placeholder="请输入要查询的账号"
+             th:value="${account}" name="search_account" id="search_account">
+      <input type="hidden" id="search_pno" name="pno" th:value="${pageInfo.pageNum}"/>
+      <button type="submit" class="btn btn-success" id="search-button" ><i class="icon-search"></i> 搜用户</button>
+    </div>
+  <div class="cl pd-5 bg-1 bk-gray mt-20">
+    <span class="l">
+		<a href="javascript:void(0);" th:onclick="user_add()" class="btn btn-primary radius">
+          <i class="icon-plus"></i> 新增用户
+        </a>
+        <a href="javascript:void(0);" th:onclick="user_update()" class="btn btn-secondary radius">
+          <i class="icon-plus"></i> 修改用户
+        </a>
+        <a href="javascript:void(0);" th:onclick="user_delete()" class="btn btn-danger radius">
+          <i class="icon-trash"></i> 批量删除
+        </a>
+	</span>
+  </div>
+  <table class="table table-border table-bordered table-hover table-bg table-sort">
+    <thead>
+      <tr class="text-c">
+        <th width="10"><input type="checkbox" name="" value=""></th>
+        <th width="40">编号</th>
+        <th width="100">账号</th>
+        <th width="100">姓名</th>
+        <th width="100">手机</th>
+        <th width="50">配送员</th>
+        <th width="50">配送次数</th>
+        <th width="100">创建时间</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="text-c" th:each="user,userStat : ${pageInfo.list}">
+        <td>
+          <input type="checkbox" th:value="${user.id}" name="ids" th:if="${session.loginUser.id ne user.id}"/>
+        </td>
+        <td th:text="${userStat.index+1}"></td>
+        <td th:text="${user.account}"></td>
+        <td th:text="${user.realname}"></td>
+        <td th:text="${user.telephone}"></td>
+        <td>
+          <span th:if="${user.isDeliverer eq 'Y'}" th:text="是"></span>
+          <span th:if="${user.isDeliverer eq 'N'}" th:text="否"></span>
+        </td>
+        <td th:text="${user.deliverCount}"></td>
+        <td th:text="${#dates.format(user.createTime,'yyyy-MM-dd HH:mm')}"></td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+  <div class="pkp">
+    <div id="kkpager"></div>
+  </div>
+</div>
+  <script type="text/javascript" th:src="@{/ccps_7_H-ui.3.0/lib/jquery/1.9.1/jquery.js}"></script>
+  <script type="text/javascript" th:src="@{/layer/layer.js}"></script>
+  <script type="text/javascript" th:src="@{/ccps_7_H-ui.3.0/static/h-ui/js/H-ui.min.js}"></script>
+  <script type="text/javascript" th:src="@{/ccps_7_H-ui.3.0/static/h-ui.admin/js/H-ui.admin.js}"></script> <!--/_footer 作为公共模版分离出去-->
+  <!--请在下方写此页面业务相关的脚本-->
+  <script type="text/javascript" th:src="@{/jQuery/jquery.contextmenu.r2.js}"></script>
+  <script type="text/javascript" th:src="@{/kkpager/kkpager.js}"></script>
+  <a th:href="${#httpServletRequest.getContextPath()}" id="contextPath" style="display: none;"></a>
+  <script th:inline="javascript">
+      function getParameter(name) {
+          var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+          var r = window.location.search.substr(1).match(reg);
+          if (r != null)
+              return unescape(r[2]);
+          return null;
+      }
+
+      $(function(){
+          var totalPage =[[${pageInfo.pages}]] ;// 总页数
+          var pageNo = getParameter('pno');
+          if (!pageNo) {
+              if ([[${currentIndex}]])
+                  pageNo = [[${currentIndex}]];
+              else
+                  pageNo = 1;
+          }
+          //初始化分页控件
+          kkpager.init({
+              pno : pageNo,
+              total : totalPage, //总页码
+              mode: 'click',
+              click : function(n){
+                  this.selectPage(n);
+                  searchPage(n);
+              },lang : {
+                  prePageText : '上一页',
+                  nextPageText : '下一页',
+                  totalPageBeforeText : '共',
+                  totalPageAfterText : '页',
+                  totalRecordsAfterText : '条数据',
+                  gopageBeforeText : '转到',
+                  gopageButtonOkText : '确定',
+                  gopageAfterText : '页',
+                  buttonTipBeforeText : '第',
+                  buttonTipAfterText : '页'
+              }
+          });
+          //生成
+          kkpager.generPageHtml();
+      });
+      function searchPage(n){
+          $("#search_pno").val(n);
+          $("#searchForm").submit();
+      }
+      // 批量删除
+      function user_delete(){
+          var ids=$("input[name=ids]:checked");
+          if(ids.length==0){
+            layer.msg("请选择要删除的数据！", {time: 2000});
+            return;
+          }
+          layer.confirm('确定要删除选中的数据吗？', {
+            btn: ['确定','取消']
+          }, function(index){
+            var context = $("#contextPath").attr("href");
+            $("#searchForm").attr("method", "post");
+            $("#searchForm").attr("action", context + "/user/delete");
+            $("#searchForm").submit();
+            layer.close(index);
+          });
+      }
+      // 新增用戶
+      function user_add(){
+        var contextPath = $("#contextPath").attr("href");
+        layer.open({
+          type: 2, //0（信息框，默认）1（页面层）2（iframe层）3（加载层）4（tips层）
+          shade:0.1, //遮罩层透明度
+          area:['600px','330px'],
+          title:'新增用户',
+          btn: ['确定', '取消'],
+          content: contextPath+"/user/page",
+          yes: function(index){
+            var body = layer.getChildFrame('body', index);
+            var account=body.find("#account");
+            if(!$.trim(account.val())){
+               layer.msg("账号不能为空", {time: 2000});
+               return
+            }
+            var existsAccount=body.find("#existsAccount").val();
+            if(existsAccount=="1"){
+               layer.msg("账号已存在", {time: 2000});
+               return
+            }
+            var operationForm = body.find("#operationForm");
+            $(operationForm).attr("action",contextPath+"/user/add");
+            $(operationForm).submit();
+            layer.close(index);
+          }
+        });
+      }
+      // 修改用户
+      function user_update(){
+        var ids=$("input[name=ids]:checked");
+        if(ids.length==0){
+           layer.msg("请选择要修改的数据！", {time: 2000});
+           return;
+        }
+        if(ids.length!=1){
+           layer.msg("请选择要一条数据！", {time: 2000});
+           return;
+        }
+        var contextPath = $("#contextPath").attr("href");
+        var id=ids[0].value;
+        var searchCount=$("#search_account").val();
+        var searchPno=$("#search_pno").val();
+        layer.open({
+          type: 2,
+          shade:0.1,
+          area:['600px','330px'],
+          title:'修改用户',
+          btn: ['确定', '取消'],
+          content: contextPath+"/user/page?id="+id+"&search_account="+searchCount+"&pno="+searchPno,
+          yes: function(index){
+            var body = layer.getChildFrame('body', index);
+            var account=body.find("#account");
+            if(!$.trim(account.val())){
+               layer.msg("账号不能为空", {time: 2000});
+               return
+            }
+            var existsAccount=body.find("#existsAccount").val();
+            if(existsAccount=="1"){
+               layer.msg("账号已存在", {time: 2000});
+               return
+            }
+            var operationForm = body.find("#operationForm");
+            $(operationForm).attr("action",contextPath+"/user/update");
+            $(operationForm).submit();
+            layer.close(index);
+          }
+        });
+      }
+      $(function(){
+          if([[${PROMPT_RESULT}]])
+              layer.msg([[${PROMPT_RESULT}]], {time: 2000});
+      });
+
+  </script>
+</body>
+</html>

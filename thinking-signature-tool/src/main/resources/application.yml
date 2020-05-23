@@ -1,0 +1,9 @@
+spring:
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+
+tool:
+  clients:
+    - name: username
+      password: password
+      client-private-key-path: /client-private.pem

@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thinking In Java</title>
+    <link rel="stylesheet" th:href="@{/css/login.css}"/>
+    <link rel="stylesheet" th:href="@{/css/font-awesome.css}"/>
+    <script type="text/javascript" th:src="@{/jQuery/jquery-3.3.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{/layer/layer.js}"></script>
+    <script>
+        $(function(){
+            if (window != top)
+    　　        top.location.href = location.href;
+        });
+
+        //回车登录
+        document.onkeyup = function () {//按键信息对象以函数参数的形式传递进来了
+            //大部分浏览器通过keyCode属性获取按键代码，但少部分浏览器使用的却是charCode
+            if (event.keyCode == 13)
+                login();
+        }
+
+        function login() {
+            var account = $.trim($("#account").val());
+            if (!account) {
+                $("#account").css("border-color", "#f86c6b");
+                layer.tips('请输入你的账号!', '#account');
+                return false;
+            }
+            var password = $.trim($("#password").val());
+            if (!password) {
+                $("#password").css("border-color", "#f86c6b");
+                layer.tips('请输入你的密码!', '#password');
+                return false;
+            }
+            $("#loginForm").submit();
+        }
+    </script>
+</head>
+
+<body>
+<div class="login">
+    <div class="message">Login</div>
+    <div id="darkbannerwrap"></div>
+    <form id="loginForm" th:object="${user}" action="#" class="layui-form" th:action="@{/login}" method="post">
+        <input type="text" th:value="*{account}" name="account" id="account" placeholder="请输入你的账号" class="layui-input"/>
+        <p class="font-color" th:if="${#fields.hasErrors('account')} " th:errors="*{account}"></p>
+        <hr class="hr15"/>
+
+        <input type="password" th:value="*{password}" name="password" id="password" placeholder="请输入你的密码"
+               class="layui-input"/>
+        <p class="font-color" th:if="${#fields.hasErrors('password')} " th:errors="*{password}"></p>
+        <hr class="hr15"/>
+
+        <input th:value="登录" onclick="login();" style="width: 100%;" type="button"/>
+    </form>
+</div>
+</body>
+</html>

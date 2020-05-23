@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" th:src="@{/ccps_7_H-ui.3.0/lib/html5shiv.js}"></script>
+    <script type="text/javascript" th:src="@{/ccps_7_H-ui.3.0/lib/respond.min.js}"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" th:href="@{/ccps_7_H-ui.3.0/static/h-ui/css/H-ui.min.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/ccps_7_H-ui.3.0/static/h-ui.admin/css/H-ui.admin.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/ccps_7_H-ui.3.0/lib/Hui-iconfont/1.0.8/iconfont.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/ccps_7_H-ui.3.0/static/h-ui.admin/skin/default/skin.css}" id="skin" />
+    <link rel="stylesheet" type="text/css" th:href="@{/ccps_7_H-ui.3.0/static/h-ui.admin/css/style.css}" />
+    <title>添加用户</title>
+</head>
+<style>
+    input{
+        width:12rem;
+    }
+    label{
+        cursor:pointer;
+        width: 40px;
+        display: block;
+        float: left;
+    }
+</style>
+<body>
+<div class="pd-20">
+    <div class="Huiform">
+        <form id="operationForm" class="layui-form" method="post">
+            <input type="hidden" id="id" name="id" th:value="${user?.id}"/>
+            <input type="hidden" id="search_account" name="search_account" th:value="${search_account}"/>
+            <input type="hidden" id="pno" name="pno" th:value="${pno}"/>
+            <input type="hidden" id="existsAccount" value="0"/>
+            <table class="table table-bg">
+                <tbody>
+                <tr>
+                    <th width="20%" class="text-r"><span class="c-red">*</span> 用户账号：</th>
+                    <td width="30%">
+                        <input th:onblur="accountExists()" id="account" name="account" type="text" th:value="${user?.account}" class="input-text" placeholder="请输入登陆账号" >
+                    </td>
+                    <th width="20%" class="text-r"><span class="c-red">*</span> 用户密码：</th>
+                    <td width="30%">
+                        <input id="password" name="password" type="text" th:value="${user?.password}" class="input-text" placeholder="请输入登陆密码">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="text-r">真实姓名：</th>
+                    <td>
+                        <input id="realname" name="realname" type="text" th:value="${user?.realname}" class="input-text" placeholder="请输入真实姓名" >
+                    </td>
+                    <th class="text-r"><span class="c-red">*</span> 手机号：</th>
+                    <td>
+                        <input id="telephone" name="telephone" type="text" th:value="${user?.telephone}" class="input-text" placeholder="请输入手机号">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="text-r">权限：</th>
+                    <td>
+                        <select id="roleId" name="roleId" class="select">
+                            <option value="0">全部分类</option>
+                            <option value="1">分类一</option>
+                            <option value="2">分类二</option>
+                        </select>
+                    </td>
+                    <th class="text-r">配送人员：</th>
+                    <td>
+                        <label for="deliverer-N">
+                            <input name="isDeliverer" type="radio" th:value="N" id="deliverer-N" checked style="width: 20px;"/>
+                            否</label>
+                        <label for="deliverer-Y" style="margin-left:2rem;">
+                            <input type="radio" id="deliverer-Y" name="isDeliverer" th:value="Y" style="width: 20px;"/>
+                            是</label>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+<script type="text/javascript" th:src="@{/ccps_7_H-ui.3.0/lib/jquery/1.9.1/jquery.js}"></script>
+<script type="text/javascript" th:src="@{/layer/layer.js}"></script>
+<script type="text/javascript" th:src="@{/ccps_7_H-ui.3.0/static/h-ui/js/H-ui.min.js}"></script>
+<script type="text/javascript" th:src="@{/ccps_7_H-ui.3.0/static/h-ui.admin/js/H-ui.admin.js}"></script>
+<a th:href="${#httpServletRequest.getContextPath()}" id="contextPath" style="display: none;"></a>
+
+<script type="text/javascript">
+
+    function accountExists(){
+        var id=$("#id").val();
+        var account=$.trim($("#account").val());
+        var contextPath = $("#contextPath").attr("href")+"/user/exists/account";
+        $.ajax({
+		    url:contextPath,
+			type:"GET",
+			async:true,
+			data:{account:account,id:id},
+			time:5000,
+			dataType:"json",
+			success:function(data, testStatus, jqXHR){
+                if(data =='1')
+                    layer.tips("账号已经存在","#account");
+                $("#existsAccount").val(data);
+			}
+		});
+    }
+</script>
+</body>
+</html>

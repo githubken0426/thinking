@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" th:src="@{/ccps_7_H-ui.3.0/lib/html5shiv.js}"></script>
+    <script type="text/javascript" th:src="@{/ccps_7_H-ui.3.0/lib/respond.min.js}"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" th:href="@{/ccps_7_H-ui.3.0/static/h-ui/css/H-ui.min.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/ccps_7_H-ui.3.0/static/h-ui.admin/css/H-ui.admin.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/ccps_7_H-ui.3.0/lib/Hui-iconfont/1.0.8/iconfont.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/ccps_7_H-ui.3.0/static/h-ui.admin/skin/default/skin.css}" id="skin" />
+    <link rel="stylesheet" type="text/css" th:href="@{/ccps_7_H-ui.3.0/static/h-ui.admin/css/style.css}" />
+    <script type="text/javascript" th:src="@{/ccps_7_H-ui.3.0/lib/jquery/1.9.1/jquery.js}"></script>
+    <script type="text/javascript" th:src="@{/layer/layer.js}"></script>
+    <script type="text/javascript" th:src="@{/ccps_7_H-ui.3.0/static/h-ui/js/H-ui.min.js}"></script>
+    <script type="text/javascript" th:src="@{/ccps_7_H-ui.3.0/static/h-ui.admin/js/H-ui.admin.js}"></script>
+    <title>添加</title>
+</head>
+<style>
+    input{
+        width:12rem;
+    }
+    label{
+        cursor:pointer;
+        width: 90px;
+        display: block;
+        float: left;
+    }
+</style>
+<body>
+<div class="pd-20">
+    <div class="Huiform">
+        <form id="operationForm" class="layui-form" th:action="@{/goods/list}"  method="get">
+            <input type="hidden" th:field="*{goodsSearch.setmealId}"/>
+            <input type="hidden" th:field="*{goodsSearch.skuCode}"/>
+            <input type="hidden" th:field="*{goodsSearch.pno}"/>
+            <table class="table table-bg">
+                <tbody>
+                <tr>
+                    <th width="15%" class="text-r"><span class="c-red">*</span> 菜品编号：</th>
+                    <td width="30%" th:text="${obj.skuCode}"></td>
+                    <th width="15%" class="text-r"><span class="c-red">*</span> 菜品名称：</th>
+                    <td width="30%" th:text="${obj.goodsTitle}"></td>
+                    <td width="10%"></td>
+                </tr>
+                <tr>
+                    <th class="text-r"><span class="c-red">*</span>库存：</th>
+                    <td>
+                        <span th:text="${obj.stock}"></span>
+                        <span th:if="${obj.goodsUnit eq '1'}">份</span>
+                        <span th:if="${obj.goodsUnit eq '2'}">斤</span>
+                        <span th:if="${obj.goodsUnit eq '3'}">KG</span>
+                    </td>
+                    <th class="text-r">定量菜品：</th>
+                    <td>
+                        <span th:if="${obj.ration eq 'N'}">不限量</span>
+                        <span th:if="${obj.ration eq 'Y'}">限量(<span th:text="${obj.rationNum}"></span>)份</span>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th class="text-r"><span class="c-red">*</span>价格：</th>
+                    <td th:text="${obj.primePrice}+'元'">
+                    </td>
+                    <th class="text-r"><span class="c-red">*</span>促销价格：</th>
+                    <td th:text="${obj.promotionPrice}+'元'">
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th class="text-r">上架时间：</th>
+                    <td th:text="${#dates.format(obj.upTime,'yyyy-MM-dd HH:mm')}">
+                    </td>
+                    <th class="text-r">下架时间：</th>
+                    <td>
+                        <span class="label label-warning radius" th:if="${obj.shelves eq 'N'}" th:text="已下架"></span>
+                        <span th:if="${obj.shelves eq 'N'}" th:text="${#dates.format(obj.downTime,'yyyy-MM-dd HH:mm')}"></span>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th class="text-r">所属套餐：</th>
+                    <td>
+                        <label th:each="meal : ${setmeals}">
+                            <input name="mealCategory" type="checkbox" th:value="${meal.category}" th:text="${meal.name}" checked="checked" style="width: 20px;"/>
+                        </label>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th class="text-r">菜品备注：</th>
+                    <td colspan="3" th:text="${obj.goodsDescription}">
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th class="text-r">菜品图片：</th>
+                    <td colspan="3">
+                        <img th:each="picture : ${obj.pictureList}" th:src="@{'/files/'+${picture}}"
+                             style="width:150px;height:150px;margin-right:5px;"/>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th class="text-r"></th>
+                    <th style="text-align: center" colspan="3">
+                        <button class="btn btn-default radius" onclick="data_cancel();" type="button">返 回</button>
+                    </th>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+<a th:href="${#httpServletRequest.getContextPath()}" id="contextPath" style="display: none;"></a>
+
+<script type="text/javascript">
+    function rationTab(ele){
+        if(ele==1){
+            $("#rationNumL").hide();
+        }else{
+            $("#rationNumL").show();
+        }
+    }
+    function data_cancel(){
+        var contextPath = $("#contextPath").attr("href");
+        $("#operationForm").attr("method", "get");
+        $("#operationForm").attr("action", contextPath + "/goods/list");
+        $("#operationForm").submit();
+    }
+</script>
+</body>
+</html>

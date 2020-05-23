@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="thinking-web:war">
+    <output-path>$PROJECT_DIR$/thinking-web/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>thinking-web</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="thinking.war">
+      <element id="artifact" artifact-name="thinking-web:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" th:src="@{/ccps_7_H-ui.3.0/lib/html5shiv.js}"></script>
+    <script type="text/javascript" th:src="@{/ccps_7_H-ui.3.0/lib/respond.min.js}"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" th:href="@{/ccps_7_H-ui.3.0/static/h-ui/css/H-ui.min.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/ccps_7_H-ui.3.0/static/h-ui.admin/css/H-ui.admin.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/ccps_7_H-ui.3.0/lib/Hui-iconfont/1.0.8/iconfont.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/ccps_7_H-ui.3.0/static/h-ui.admin/skin/default/skin.css}" id="skin" />
+    <link rel="stylesheet" type="text/css" th:href="@{/ccps_7_H-ui.3.0/static/h-ui.admin/css/style.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/jQuery/webuploader/webuploader.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/jQuery/webuploader/preview.css}"/>
+    <script type="text/javascript" th:src="@{/ccps_7_H-ui.3.0/lib/jquery/1.9.1/jquery.js}"></script>
+    <script type="text/javascript" th:src="@{/layer/layer.js}"></script>
+    <script type="text/javascript" th:src="@{/ccps_7_H-ui.3.0/static/h-ui/js/H-ui.min.js}"></script>
+    <script type="text/javascript" th:src="@{/ccps_7_H-ui.3.0/static/h-ui.admin/js/H-ui.admin.js}"></script>
+    <script type="text/javascript" th:src="@{/jQuery/webuploader/webuploader.min.js}"></script>
+    <script type="text/javascript" th:src="@{/jQuery/webuploader/preview.js}"></script>
+    <title>添加</title>
+</head>
+<style>
+    input{
+        width:12rem;
+    }
+    label{
+        cursor:pointer;
+        width: 90px;
+        display: block;
+        float: left;
+    }
+</style>
+<body>
+<div class="pd-20">
+    <div class="Huiform">
+        <form id="operationForm" class="layui-form" th:action="@{/goods/add}"  method="post" enctype="multipart/form-data">
+            <input type="hidden" th:field="*{goodsSearch.setmealId}"/>
+            <input type="hidden" th:field="*{goodsSearch.skuCode}"/>
+            <input type="hidden" th:field="*{goodsSearch.pno}"/>
+            <table class="table table-bg">
+                <tbody>
+                <tr>
+                    <th width="15%" class="text-r"><span class="c-red">*</span> 菜品名称：</th>
+                    <td width="30%">
+                        <input id="goodsTitle" name="goodsTitle" type="text" class="input-text" placeholder="请输入标题" >
+                    </td>
+                    <th width="15%" class="text-r"><span class="c-red">*</span>库存：</th>
+                    <td width="30%">
+                        <input id="stock" name="stock" type="number" min="1" class="input-text" placeholder="库存数" >
+                    </td>
+                    <td width="10%"></td>
+                </tr>
+                <tr>
+                    <th class="text-r"><span class="c-red">*</span>库存单位：</th>
+                    <td>
+                        <select class="select" name="goodsUnit">
+                            <option value="1">份</option>
+                            <option value="2">斤</option>
+                            <option value="3">KG</option>
+                        </select>
+                    </td>
+                    <th class="text-r">定量菜品：</th>
+                    <td >
+                        <label for="ration1">
+                            <input id="ration1" name="ration" type="radio" onclick="rationTab(1)" th:value="N" checked style="width: 20px;"/>否
+                        </label>
+                        <label for="ration2">
+                            <input id="ration2" name="ration"type="radio" onclick="rationTab(2)" th:value="Y" style="width: 20px;"/>是
+                        </label>
+                        <label id="rationNumL" style="display:none;width:150px;float:right;">
+                            限购份数：<input id="rationNum" name="rationNum" type="number" class="input-text" th:value="1" style="width:60px;" />
+                        </label>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th class="text-r"><span class="c-red">*</span>价格：</th>
+                    <td>
+                        <input id="primePrice" name="primePrice" type="number" min="1" class="input-text" placeholder="请输入菜品价格（元）" >
+                    </td>
+                    <th class="text-r"><span class="c-red">*</span>促销价格：</th>
+                    <td>
+                        <input id="promotionPrice" name="promotionPrice" type="number" min="1" class="input-text" placeholder="请输入促销价格（元）" >
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th class="text-r">所属套餐：</th>
+                    <td>
+                        <label th:each="meal : ${setmeals}">
+                            <input name="mealCategory" type="checkbox" th:value="${meal.category}" th:text="${meal.name}" checked="checked" style="width: 20px;"/>
+                        </label>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th class="text-r">菜品备注：</th>
+                    <td colspan="3">
+                        <textarea class="textarea" id="goodsDescription" name="goodsDescription" placeholder="图片描述" rows="2" cols="20" dragonfly="true" datatype="*10-100"></textarea>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th class="text-r">菜品图片：</th>
+                    <td colspan="3">
+                        <div class="upload-container">
+                            <div id="uploader" class="uploader">
+                                <div class="queueList">
+                                    <div id="dndArea" class="placeholder">
+                                        <div id="filePicker"></div>
+                                    </div>
+                                </div>
+                                <div class="statusBar" style="display:none;">
+                                    <div class="progress">
+                                        <span class="text">0%</span>
+                                        <span class="percentage"></span>
+                                    </div>
+                                    <div class="info"></div>
+                                    <div class="btns">
+                                        <div id="filePicker2" class="filePicker2"></div>
+                                        <div class="uploadBtn">开始上传</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th class="text-r"></th>
+                    <th style="text-align: center" colspan="3">
+                        <button onclick="return data_submit();" class="btn btn-secondary radius" type="submit" style="margin-right:100px;">
+                            <i class="Hui-iconfont"></i> 保存</button>
+                        <button class="btn btn-default radius" onclick="data_cancel();" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+                    </th>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+<a th:href="${#httpServletRequest.getContextPath()}" id="contextPath" style="display: none;"></a>
+
+<script type="text/javascript">
+    function rationTab(ele){
+        if(ele==1){
+            $("#rationNumL").hide();
+        }else{
+            $("#rationNumL").show();
+        }
+    }
+    function data_submit(){
+        var goodsTitle=$.trim($("#goodsTitle").val());
+        if(!goodsTitle){
+            layer.tips('标题不能为空!', '#goodsTitle');
+            return false;
+        }
+        var stock=$.trim($("#stock").val());
+        if(!stock){
+            layer.tips('库存不能为空!', '#stock');
+            return false;
+        }
+        var primePrice=$.trim($("#primePrice").val());
+        if(!primePrice){
+            layer.tips('价格不能为空!', '#primePrice');
+            return false;
+        }
+        var promotionPrice=$.trim($("#promotionPrice").val());
+        if(!promotionPrice){
+            layer.tips('促销价格不能为空!', '#promotionPrice');
+            return false;
+        }
+        return true;
+    }
+    function data_cancel(){
+        var contextPath = $("#contextPath").attr("href");
+        $("#operationForm").attr("method", "get");
+        $("#operationForm").attr("action", contextPath + "/goods/list");
+        $("#operationForm").submit();
+    }
+</script>
+</body>
+</html>

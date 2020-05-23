@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.thinking.web.mapper.UserMapper">
+  <resultMap id="BaseResultMap" type="cn.thinking.web.entity.User">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="account" jdbcType="VARCHAR" property="account" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="realname" jdbcType="VARCHAR" property="realname" />
+    <result column="telephone" jdbcType="VARCHAR" property="telephone" />
+    <result column="is_deliverer" jdbcType="CHAR" property="isDeliverer" />
+    <result column="deliver_count" jdbcType="INTEGER" property="deliverCount" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="modify_time" jdbcType="TIMESTAMP" property="modifyTime" />
+  </resultMap>
+
+  <select id="selectByAccount" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select id, account, password, realname, telephone, is_deliverer, deliver_count, create_time
+    from v_user
+    where account = #{account,jdbcType=VARCHAR}
+  </select>
+
+  <delete id="deleteBatch" parameterType="java.lang.String">
+    delete from v_user where id in
+    <foreach collection="array" item="id" open="(" separator="," close=")">
+      #{id,jdbcType=INTEGER}
+    </foreach>
+  </delete>
+
+  <insert id="insert" parameterType="cn.thinking.web.entity.User">
+    insert into v_user (id, account, password, 
+      realname, telephone, is_deliverer, deliver_count)
+    values (#{id,jdbcType=INTEGER}, #{account,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+      #{realname,jdbcType=VARCHAR}, #{telephone,jdbcType=VARCHAR}, #{isDeliverer,jdbcType=CHAR}, 
+      #{deliverCount,jdbcType=INTEGER})
+  </insert>
+
+  <update id="updateByPrimaryKey" parameterType="cn.thinking.web.entity.User">
+    update v_user
+    set account = #{account,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      realname = #{realname,jdbcType=VARCHAR},
+      telephone = #{telephone,jdbcType=VARCHAR},
+      is_deliverer = #{isDeliverer,jdbcType=CHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select id, account, password, realname, telephone, is_deliverer, deliver_count, create_time
+    from v_user
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+
+  <select id="selectAllUser" parameterType="org.springframework.ui.ModelMap" resultType="cn.thinking.web.entity.User">
+    select * from v_user
+    <where>
+      <if test="account!=null and account!=''">
+        account like '%${account}%'
+      </if>
+    </where>
+    order by create_time desc
+  </select>
+
+  <select id="selectAccountExists" parameterType="java.util.Map" resultType="java.lang.Integer">
+    select count(1) from v_user
+    <where>
+      account=#{account,jdbcType=VARCHAR}
+      <if test="id!=null and id!=''">
+        and id!= #{id,jdbcType=VARCHAR}
+      </if>
+    </where>
+  </select>
+</mapper>

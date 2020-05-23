@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="thinking-common" />
+        <module name="thinking-signature" />
+        <module name="thinking-signature-tool" />
+        <module name="thinking-concurrent" />
+        <module name="thinking-data-structure" />
+        <module name="thinking-web" />
+        <module name="thinking-design-pattern" />
+        <module name="thinking-conf" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="thinking" target="1.8" />
+      <module name="thinking-common" target="1.8" />
+      <module name="thinking-concurrent" target="1.8" />
+      <module name="thinking-conf" target="1.8" />
+      <module name="thinking-data-structure" target="1.8" />
+      <module name="thinking-design-pattern" target="1.8" />
+      <module name="thinking-docs" target="1.8" />
+      <module name="thinking-entity" target="1.8" />
+      <module name="thinking-signature" target="1.8" />
+      <module name="thinking-signature-tool" target="1.8" />
+      <module name="thinking-web" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="thinking" options="" />
+      <module name="thinking-common" options="-parameters" />
+      <module name="thinking-concurrent" options="-parameters" />
+      <module name="thinking-conf" options="-parameters" />
+      <module name="thinking-data-structure" options="-parameters" />
+      <module name="thinking-design-pattern" options="-parameters" />
+      <module name="thinking-docs" options="-parameters" />
+      <module name="thinking-entity" options="-parameters" />
+      <module name="thinking-signature" options="-parameters" />
+      <module name="thinking-signature-tool" options="-parameters" />
+      <module name="thinking-web" options="-parameters" />
+    </option>
+  </component>
+</project>

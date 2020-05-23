@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <!--<link rel="Shortcut Icon" href="/favicon.ico" />-->
+    <!--[if lt IE 9]>
+    <script type="text/javascript" th:src="@{/ccps_7_H-ui.3.0/lib/html5shiv.js}"></script>
+    <script type="text/javascript" th:src="@{/ccps_7_H-ui.3.0/lib/respond.min.js}"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" th:href="@{/ccps_7_H-ui.3.0/static/h-ui/css/H-ui.min.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/ccps_7_H-ui.3.0/static/h-ui.admin/css/H-ui.admin.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/ccps_7_H-ui.3.0/lib/Hui-iconfont/1.0.8/iconfont.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/ccps_7_H-ui.3.0/static/h-ui.admin/skin/default/skin.css}"
+          id="skin"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/ccps_7_H-ui.3.0/static/h-ui.admin/css/style.css}"/>
+    <!--[if IE 6]>
+    <script type="text/javascript" src="@{/ccps_7_H-ui.3.0/lib/DD_belatedPNG_0.0.8a-min.js}"></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+
+    <title>首页--爱尚好生活</title>
+</head>
+<body>
+<header class="navbar-wrapper">
+    <div class="navbar navbar-fixed-top">
+        <div class="container-fluid cl">
+            <a class="logo navbar-logo f-l mr-10 hidden-xs" th:href="@{/home}">好生活农园</a>
+            <span class="logo navbar-slogan f-l mr-10 hidden-xs"></span>
+            <a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:;">&#xe667;</a>
+            <nav class="nav navbar-nav">
+                <ul class="cl"></li>
+                </ul>
+            </nav>
+            <nav id="Hui-userbar" class="nav navbar-nav navbar-userbar hidden-xs">
+                <ul class="cl">
+                    <li>用户信息</li>
+                    <li class="dropDown dropDown_hover">
+                        <a href="#" class="dropDown_A"><span th:text="${session.loginUser.account}"></span><i
+                                class="Hui-iconfont">&#xe6d5;</i></a>
+                        <ul class="dropDown-menu menu radius box-shadow">
+                            <li><a href="javascript:;" onClick="changePassword()">修改密码</a></li>
+                            <li><a th:href="@{/logout}">退出</a></li>
+                        </ul>
+                    </li>
+                    <li id="Hui-skin" class="dropDown right dropDown_hover">
+                        <a href="javascript:;" class="dropDown_A" title="换肤">
+                            <i class="Hui-iconfont" style="font-size:18px">&#xe62a;</i></a>
+                        <ul class="dropDown-menu menu radius box-shadow">
+                            <li><a href="javascript:;" data-val="default" title="默认（黑色）">默认（黑色）</a></li>
+                            <li><a href="javascript:;" data-val="blue" title="蓝色">蓝色</a></li>
+                            <li><a href="javascript:;" data-val="green" title="绿色">绿色</a></li>
+                            <li><a href="javascript:;" data-val="red" title="红色">红色</a></li>
+                            <li><a href="javascript:;" data-val="yellow" title="黄色">黄色</a></li>
+                            <li><a href="javascript:;" data-val="orange" title="橙色">橙色</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<aside class="Hui-aside">
+    <div class="menu_dropdown bk_2">
+        <dl id="menu-picture">
+            <dt>
+                <i class="Hui-iconfont">&#xe613;</i> 推荐管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i>
+            </dt>
+            <dd>
+                <ul>
+                    <li>
+                        <a id="advertise" data-href="" data-title="图片管理" href="javascript:void(0)">推荐管理</a>
+                    </li>
+                </ul>
+            </dd>
+        </dl>
+        <dl id="menu-product">
+            <dt>
+                <i class="Hui-iconfont">&#xe620;</i> 菜品管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i>
+            </dt>
+            <dd>
+                <ul>
+                    <li><a id="goods" data-href="" data-title="菜品管理" href="javascript:void(0)">菜品管理</a></li>
+                </ul>
+            </dd>
+        </dl>
+
+        <dl id="menu-member">
+            <dt>
+                <i class="Hui-iconfont">&#xe60d;</i> 会员管理<i
+                    class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i>
+            </dt>
+            <dd>
+                <ul>
+                    <li><a id="customer" data-href="" data-title="会员列表" href="javascript:;">会员列表</a></li>
+                </ul>
+            </dd>
+        </dl>
+        <dl id="menu-admin">
+            <dt>
+                <i class="Hui-iconfont">&#xe62d;</i> 订单管理<i
+                    class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i>
+            </dt>
+            <dd>
+                <ul>
+                    <li><a id="order" data-href="" data-title="订单管理" href="javascript:void(0)">订单管理</a></li>
+                </ul>
+                <ul>
+                    <li><a id="menu" data-href="" data-title="菜单管理" href="javascript:void(0)">菜单管理</a></li>
+                </ul>
+            </dd>
+
+        </dl>
+        <dl id="menu-comments">
+            <dt>
+                <i class="Hui-iconfont">&#xe622;</i> 销售统计<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i>
+            </dt>
+            <dd>
+                <ul>
+                    <li><a id="statistic" data-href="" data-title="销售统计" href="javascript:void(0)">销售统计</a></li>
+                </ul>
+            </dd>
+        </dl>
+        <dl id="menu-users">
+            <dt>
+                <i class="Hui-iconfont">&#xe622;</i> 系统管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i>
+            </dt>
+            <dd>
+                <ul>
+                    <li><a id="user" data-href="" data-title="用户管理">用户管理</a></li>
+                </ul>
+                 <ul>
+                    <li><a id="apk" data-href="" data-title="APK管理">APK管理</a></li>
+                </ul>
+            </dd>
+        </dl>
+    </div>
+</aside>
+<div class="dislpayArrow hidden-xs">
+    <a class="pngfix" href="javascript:void(0);" onClick="displaynavbar(this)"></a>
+</div>
+<section class="Hui-article-box">
+    <div id="Hui-tabNav" class="Hui-tabNav hidden-xs">
+        <div class="Hui-tabNav-wp">
+            <ul id="min_title_list" class="acrossTab cl">
+                <li class="active">
+                    <span title="欢迎登录系统" data-href="#">欢迎登录系统</span>
+                    <em></em>
+                </li>
+            </ul>
+        </div>
+        <div class="Hui-tabNav-more btn-group">
+            <a id="js-tabNav-prev" class="btn radius btn-default size-S" href="javascript:;">
+                <i class="Hui-iconfont">&#xe6d4;</i>
+            </a>
+            <a id="js-tabNav-next" class="btn radius btn-default size-S" href="javascript:;">
+                <i class="Hui-iconfont">&#xe6d7;</i>
+            </a>
+        </div>
+    </div>
+    <div id="iframe_box" class="Hui-article">
+        <div class="show_iframe">
+            <div style="display:none" class="loading"></div>
+            <iframe scrolling="yes" frameborder="0" th:src="@{/welcome}"></iframe>
+        </div>
+    </div>
+</section>
+<div id="changePasswordDiv" class="Huiform" style="display:none;">
+    <form id="changePasswordForm" class="layui-form" method="post">
+        <table class="table table-bg">
+            <tbody>
+            <tr>
+                <th width="30%" class="text-r"><span class="c-red">*</span> 用户账号：</th>
+                <td width="60%">
+                    <input name="account" type="text" th:value="${session.loginUser.account}" class="input-text"
+                           placeholder="请输入登陆账号">
+                </td>
+                <td width="10%"></td>
+            </tr>
+            <tr>
+                <th class="text-r">原密码：</th>
+                <td>
+                    <input type="hidden" id="originPwd" th:value="${session.loginUser.password}"/>
+                    <input id="password" name="password" type="text" class="input-text" placeholder="请输入原密码">
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <th class="text-r">新密码：</th>
+                <td>
+                    <input id="newPwd" name="newPwd" type="text" class="input-text" placeholder="请输入新密码">
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <th class="text-r">确认密码：</th>
+                <td>
+                    <input id="validatePwd" name="validatePwd" type="text" class="input-text" placeholder="请再次输入密码">
+                </td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" th:src="@{/ccps_7_H-ui.3.0/lib/jquery/1.9.1/jquery.js}"></script>
+<script type="text/javascript" th:src="@{/layer/layer.js}"></script>
+<script type="text/javascript" th:src="@{/ccps_7_H-ui.3.0/static/h-ui/js/H-ui.min.js}"></script>
+<script type="text/javascript" th:src="@{/ccps_7_H-ui.3.0/static/h-ui.admin/js/H-ui.admin.js}"></script>
+<!--/_footer 作为公共模版分离出去-->
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" th:src="@{/jQuery/jquery.contextmenu.r2.js}"></script>
+<a th:href="${#httpServletRequest.getContextPath()}" id="contextPath" style="display: none;"></a>
+<script type="text/javascript">
+    /*修改密码*/
+    function changePassword() {
+        layer.open({
+            type: 1,
+            area: ['500px', '300px'],
+            shade: 0.4,
+            title: '修改密码',
+            content: $("#changePasswordDiv"),
+            btn: ['确定', '取消'],
+            yes: function (index) {
+                var origin = $.trim($("#password").val());
+                if ($("#originPwd").val() != origin) {
+                    layer.tips("原密码不正确！", "#password");
+                    return false;
+                }
+                var newPwd = $.trim($("#newPwd").val());
+                if (!newPwd) {
+                    layer.tips("新密码不能为空！", "#newPwd");
+                    return false;
+                }
+                if (newPwd.length == 10) {
+                    layer.tips("新密码长度6-10位！", "#newPwd");
+                    return false;
+                }
+                var validatePwd = $.trim($("#validatePwd").val());
+                if (newPwd != validatePwd) {
+                    layer.tips("密码输入不一致！", "#validatePwd");
+                    return false;
+                }
+                passwordAjax();
+                layer.close(index);
+            }
+        });
+    }
+
+    function passwordAjax() {
+        var formData = new FormData($("#changePasswordForm")[0]);
+        var path = $("#contextPath").attr("href") + "/password/change";
+        $.ajax({
+            url: path,
+            type: "post",
+
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function (data) {
+                if (data == '1')
+                    layer.alert('修改成功,请重新登录！', {icon: data}, function () {
+                        parent.parent.location = contextPath + "/logout";
+                    });
+                else
+                    layer.alert('修改失败！', {icon: data});
+            }, error: function (XMLHttpRequest, textStatus, errorThrown) {
+                console.log(textStatus);
+                closeLayer();
+            }
+        });
+    }
+
+    $(function () {
+        var contextPath = $("#contextPath").attr("href");
+        $("#user").attr("data-href", contextPath + "/user/list");
+        $("#advertise").attr("data-href", contextPath + "/advertise/list");
+        $("#goods").attr("data-href", contextPath + "/goods/list");
+        $("#customer").attr("data-href", contextPath + "/customer/list");
+        $("#menu").attr("data-href", contextPath + "/menu/menu");
+        $("#order").attr("data-href", contextPath + "/order/list");
+        $("#apk").attr("data-href", contextPath + "/apk/page");
+    });
+</script>
+</body>
+</html>

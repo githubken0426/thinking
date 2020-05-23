@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/thinking-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/thinking-concurrent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/thinking-conf" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/thinking-data-structure" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/thinking-design-pattern" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/thinking-docs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/thinking-signature" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/thinking-signature-tool" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/thinking-web" charset="UTF-8" />
+  </component>
+</project>
