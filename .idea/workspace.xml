@@ -5,22 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47e90655-2c51-4fad-a667-04ab82a6a90d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/list/AbstractCollectionMe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/list/AbstractListMe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/list/ArrayListMe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/list/ArraysMe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/list/CollectionMe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/list/CollectionsMe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/list/IteratorMe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/list/ListIteratorMe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/list/ListMe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/map/MyAbstractMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/map/MyHashMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/map/MyMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/map/SortMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/map/lang/IterableMe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -45,15 +30,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/list/AbstractListMe.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="681" column="6" selection-start-line="681" selection-start-column="6" selection-end-line="681" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/list/ArrayListMe.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -126,11 +102,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/map/MapKey.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="42" column="18" lean-forward="true" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+            <state relative-caret-position="575">
+              <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -138,7 +114,21 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="291">
+              <caret line="85" column="30" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>.security.oauth</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -150,13 +140,13 @@
         <option value="$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/bit/BitPermission.java" />
         <option value="$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/map/MapKey.java" />
         <option value="$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/bit/BitOperation.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/thinking-common/src/main/resources/git" />
         <option value="$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/map/MyMap.java" />
         <option value="$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/map/utils/ListMe.java" />
         <option value="$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/list/ListMe.java" />
         <option value="$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/map/SortMap.java" />
         <option value="$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/map/lang/IterableMe.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -221,23 +211,6 @@
               <item name="thinking-common" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="thinking" type="b2602c69:ProjectViewProjectNode" />
-              <item name="thinking" type="462c0819:PsiDirectoryNode" />
-              <item name="thinking-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="thinking" type="b2602c69:ProjectViewProjectNode" />
-              <item name="thinking" type="462c0819:PsiDirectoryNode" />
-              <item name="thinking-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="thinking" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -372,12 +345,12 @@
       <workItem from="1590217830202" duration="232000" />
       <workItem from="1590218140437" duration="123000" />
       <workItem from="1590218570095" duration="100000" />
-      <workItem from="1590459023983" duration="1015000" />
+      <workItem from="1590459023983" duration="1424000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7560000" />
+    <option name="totallyTimeSpent" value="7969000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -546,13 +519,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/thinking-common/src/main/resources/git">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -638,11 +604,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/map/MapKey.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="42" column="18" lean-forward="true" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+        <state relative-caret-position="575">
+          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="85" column="30" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="30" />
         </state>
       </provider>
     </entry>
