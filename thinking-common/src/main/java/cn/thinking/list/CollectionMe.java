@@ -1,8 +1,6 @@
 package cn.thinking.list;
 
-
-import resourceCode.lang.IterableMe;
-
+import cn.thinking.map.lang.IterableMe;
 
 /**
  * Collection 接口源码
