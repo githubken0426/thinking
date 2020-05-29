@@ -123,7 +123,7 @@ public class SignatureAnnotationAspect {
             if (returnValue instanceof String) {
                 body = (String) returnValue;
             } else if (returnValue instanceof ResponseEntity) {
-                ResponseEntity responseEntity = (ResponseEntity) returnValue;
+                ResponseEntity<?> responseEntity = (ResponseEntity<?>) returnValue;
                 status = responseEntity.getStatusCodeValue();
                 if (responseEntity.getBody() != null) {
                     body = objectMapper.writeValueAsString(responseEntity.getBody());

@@ -23,7 +23,7 @@ public class MediaTypeHandleContext {
 
     @PostConstruct
     private void init() {
-        mediaTypeMap = new HashMap();
+        mediaTypeMap = new HashMap<>();
         strategyServices.forEach(strategy -> {
             List<MediaType> mediaTypes = strategy.getMediaTypes();
             if (CollectionUtils.isEmpty(mediaTypes)) {
