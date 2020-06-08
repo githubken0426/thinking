@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-@ConfigurationProperties(prefix = "tool")
+@ConfigurationProperties(prefix = "signature")
 public class SignatureToolServiceImpl implements SignatureToolService {
     private static final Logger logger = LogManager.getLogger();
     @Autowired

@@ -53,7 +53,7 @@
                class="layui-input"/>
         <p class="font-color" th:if="${#fields.hasErrors('password')} " th:errors="*{password}"></p>
         <hr class="hr15"/>
-
+		<a th:value="Annotation_Rquesting_Name" th:href="COMMONCONTROLLER#fullProperties" style="width: 100%;" />
         <input th:value="登录" onclick="login();" style="width: 100%;" type="button"/>
     </form>
 </div>

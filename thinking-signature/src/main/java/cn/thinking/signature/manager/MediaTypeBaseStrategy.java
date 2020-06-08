@@ -1,8 +1,8 @@
 package cn.thinking.signature.manager;
 
-import cn.thinking.signature.pojo.SignatureData;
-
 import javax.servlet.http.HttpServletRequest;
+
+import cn.thinking.signature.pojo.SignatureData;
 
 public abstract class MediaTypeBaseStrategy implements MediaTypeHandleService {
 

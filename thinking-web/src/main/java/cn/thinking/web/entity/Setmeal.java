@@ -71,6 +71,6 @@ public class Setmeal {
     }
 
     public void setIsSelected(Boolean isSelected) {
-        isSelected = isSelected;
+    	this.isSelected = isSelected;
     }
 }

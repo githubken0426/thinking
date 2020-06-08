@@ -9,13 +9,16 @@ import java.util.Base64;
 import java.util.List;
 
 /**
- * ignoreUnknownFields 在有属性不能匹配到声明的域的时候是否抛出异常
+ * ignoreUnknownFields 在有属性不能匹配到声明的域的时候是否抛出异常(默认为 true)
  * ignoreInvalidFields 当我们为属性配置错误的值时，而又不希望 Spring Boot 应用启动失败，
  *                      设置ignoreInvalidFields 属性为 true (默认为 false)
  *                      比如字段类型为Integer,yml中设置为字符串，默认会抛出异常
  */
 @Component
-@ConfigurationProperties(prefix = Constant.CONFIGURE_PREFIX)
+@ConfigurationProperties(
+		prefix = Constant.CONFIGURE_PREFIX, 
+		ignoreInvalidFields = false, 
+		ignoreUnknownFields = true)
 public class BasicClientManager implements ClientManager {
     List<Client> clients;
 
