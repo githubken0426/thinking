@@ -16,6 +16,7 @@ public class MediaTypeStrategies {
 
 		@Override
 		public List<MediaType> getMediaTypes() {
+			System.out.println(DefaultMediaTypeStrategy.class+"getMediaTypes");
 			// TODO Auto-generated method stub
 			return null;
 		}
@@ -23,7 +24,7 @@ public class MediaTypeStrategies {
 		@Override
 		protected void doHandle(SignatureData requestData, HttpServletRequest httpRequest) throws Exception {
 			// TODO Auto-generated method stub
-			
+			System.out.println(DefaultMediaTypeStrategy.class+"doHandle");
 		}
 		 
 	 }

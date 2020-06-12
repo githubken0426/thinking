@@ -1,26 +1,23 @@
 package cn.thinking.signature.tool.service;
 
+import java.util.List;
+
+import org.apache.commons.lang3.StringUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
+
 import cn.thinking.signature.pojo.SignatureData;
-import cn.thinking.signature.service.SignatureService;
 import cn.thinking.signature.tool.pojo.Client;
 import cn.thinking.signature.tool.pojo.SignatureResponse;
 import cn.thinking.signature.tool.utils.AuthUtils;
 import cn.thinking.signature.utils.SignatureUtils;
-import org.apache.commons.lang3.StringUtils;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
-
-import java.util.List;
 
 @Component
 @ConfigurationProperties(prefix = "signature")
 public class SignatureToolServiceImpl implements SignatureToolService {
     private static final Logger logger = LogManager.getLogger();
-    @Autowired
-    private SignatureService signatureService;
 
     List<Client> clients;
 

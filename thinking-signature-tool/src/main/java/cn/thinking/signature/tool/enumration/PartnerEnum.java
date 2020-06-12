@@ -5,7 +5,7 @@ import lombok.Getter;
 @Getter
 public enum PartnerEnum {
 
-    PARTNER("username", "Partner");
+	SINA("sina", "sina"),BAIDU("baidu", "baidu");
 
     private String clientId;
     private String name;

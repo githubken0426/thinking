@@ -11,6 +11,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -44,6 +45,19 @@ public class ApiController {
         ApiResponseBody<String> response = new ApiResponseBody<String>();
         response.setCode("1");
         response.setMessage("Handler info Success!");
+        return response;
+    }
+    
+    @ApiOperation(value = "receive customer", notes = "receive customer")
+    @ApiResponses(value = {@ApiResponse(code = 200, message = "receive information success")})
+    @GetMapping(value = "/v1/customer", produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseStatus(HttpStatus.OK)
+//    @SignatureRequestRequired
+    public ApiResponseBody<?> customer() {
+        logger.info("prepare receive info");
+        ApiResponseBody<String> response = new ApiResponseBody<String>();
+        response.setCode("1");
+        response.setMessage("Handler customer Success!");
         return response;
     }
 }

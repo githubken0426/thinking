@@ -65,7 +65,7 @@
 
                                     <div class="form-group">
                                         <label for="name">client ID</label>
-                                        <input type="text" class="form-control" id="clientId" value="username"
+                                        <input type="text" class="form-control" id="clientId" value="sina"
                                                placeholder="">
                                     </div>
 
