@@ -1,0 +1,12 @@
+spring:
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+
+signature:
+  clients:
+    - name: sina
+      password: sina
+      client-private-key-path: /client-private.pem
+    - name: baidu
+      password: baidu
+      client-private-key-path: /client-private.pem

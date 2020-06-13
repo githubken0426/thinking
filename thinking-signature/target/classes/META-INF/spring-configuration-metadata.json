@@ -1,0 +1,11 @@
+{
+  "groups": [
+    {
+      "name": "signature",
+      "type": "cn.thinking.signature.manager.BasicClientManager",
+      "sourceType": "cn.thinking.signature.manager.BasicClientManager"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}

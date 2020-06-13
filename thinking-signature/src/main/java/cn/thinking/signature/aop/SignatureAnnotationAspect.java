@@ -140,7 +140,7 @@ public class SignatureAnnotationAspect {
             responseData.setHttpLocation(httpResponse.getHeader(HttpHeaders.LOCATION));
         }
         responseData.setHttpStatus(String.valueOf(status));
-        String signature = signatureService.signatureString(client, responseData);
+         String signature = signatureService.signatureString(client, responseData);
         logger.info(Constant.LOG_PREFIX + " -- ： after signature data is {}", signature);
         httpResponse.addHeader(Constant.HEADER_SIGNATURE, signature);
     }

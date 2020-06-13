@@ -9,15 +9,15 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
-//@EnableWebSecurity
-public class WebSecurityConfig {
+@EnableWebSecurity
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 
-    /**extends WebSecurityConfigurerAdapter
+    /**
      * username:user
      * password:password(bcrypt加密)
      *
      * @return
-     
+     */
     @Override
     @Bean
     public UserDetailsService userDetailsService() {
@@ -33,7 +33,7 @@ public class WebSecurityConfig {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/resources/**", "/login","/v1/**")
+                .antMatchers("/resources/**", "/login")
                 .permitAll()
                 .and()
                 .formLogin()
@@ -49,9 +49,9 @@ public class WebSecurityConfig {
                 .antMatchers("/signature")
                 .permitAll()
                 .and()
-                .httpBasic()
-                .and()
+//                .httpBasic()
+//                .and()
                 .csrf().disable();
-    }*/
+    }
 }
 
