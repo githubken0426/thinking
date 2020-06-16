@@ -11,79 +11,80 @@ import java.security.PrivateKey;
 import java.security.PublicKey;
 
 public class Client {
-    /**
-     * 渠道名称
-     */
-    private String name;
-    /**
-     * 渠道密码
-     */
-    private String password;
-    /**
-     * 请求是解密的公钥key
-     */
-    private PublicKey clientPublicKey;
-    /**
-     * 响应是加密的私钥key
-     */
-    private PrivateKey serverPrivateKey;
+	/**
+	 * 渠道名称
+	 */
+	private String name;
+	/**
+	 * 渠道密码
+	 */
+	private String password;
+	/**
+	 * 请求是解密的公钥key
+	 */
+	private PublicKey clientPublicKey;
 
-    public String getName() {
-        return name;
-    }
+	/**
+	 * 响应是加密的私钥key
+	 */
+	private PrivateKey serverPrivateKey;
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public String getPassword() {
-        return password;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+	public String getPassword() {
+		return password;
+	}
 
-    public PublicKey getClientPublicKey() {
-        return clientPublicKey;
-    }
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
-    public void setClientPublicKey(PublicKey clientPublicKey) {
-        this.clientPublicKey = clientPublicKey;
-    }
+	public PublicKey getClientPublicKey() {
+		return clientPublicKey;
+	}
 
-    public PrivateKey getServerPrivateKey() {
-        return serverPrivateKey;
-    }
+	public void setClientPublicKey(PublicKey clientPublicKey) {
+		this.clientPublicKey = clientPublicKey;
+	}
 
-    public void setServerPrivateKey(PrivateKey serverPrivateKey) {
-        this.serverPrivateKey = serverPrivateKey;
-    }
+	public PrivateKey getServerPrivateKey() {
+		return serverPrivateKey;
+	}
 
-    public void setClientPublicKeyPath(String clientPublicKeyPath) {
-        try {
-            Path publicKeyPem = Paths.get(EnvironmentUtils.getEnvironment("APP_HOME_CONF") + clientPublicKeyPath);
-            if (publicKeyPem.toFile().exists()) {
-                this.clientPublicKey = SignatureUtils.exportPublicKey(publicKeyPem);
-            } else {
-                throw new SecurityKeyInitializationException("Key path not exist.");
-            }
-        } catch (Exception e) {
-            throw new SecurityKeyInitializationException("Security key init failed", e);
-        }
-    }
+	public void setServerPrivateKey(PrivateKey serverPrivateKey) {
+		this.serverPrivateKey = serverPrivateKey;
+	}
 
-    public void setServerPrivateKeyPath(String serverPrivateKeyPath) {
-        try {
-            Path privateKeyPem = Paths.get(EnvironmentUtils.getEnvironment("APP_HOME_CONF") + serverPrivateKeyPath);
-            if (Files.exists(privateKeyPem)) {
-                this.serverPrivateKey = SignatureUtils.exportPrivateKey(privateKeyPem);
-            } else {
-                throw new SecurityKeyInitializationException("Key path not exist.");
-            }
-        } catch (Exception e) {
-            throw new SecurityKeyInitializationException("Security key init failed", e);
-        }
-    }
+	public void setClientPublicKeyPath(String clientPublicKeyPath) {
+		try {
+			Path publicKeyPem = Paths.get(EnvironmentUtils.getEnvironment("APP_HOME_CONF") + clientPublicKeyPath);
+			if (publicKeyPem.toFile().exists()) {
+				this.clientPublicKey = SignatureUtils.exportPublicKey(publicKeyPem);
+			} else {
+				throw new SecurityKeyInitializationException("Key path not exist.");
+			}
+		} catch (Exception e) {
+			throw new SecurityKeyInitializationException("Security key init failed", e);
+		}
+	}
+
+	public void setServerPrivateKeyPath(String serverPrivateKeyPath) {
+		try {
+			Path privateKeyPem = Paths.get(EnvironmentUtils.getEnvironment("APP_HOME_CONF") + serverPrivateKeyPath);
+			if (Files.exists(privateKeyPem)) {
+				this.serverPrivateKey = SignatureUtils.exportPrivateKey(privateKeyPem);
+			} else {
+				throw new SecurityKeyInitializationException("Key path not exist.");
+			}
+		} catch (Exception e) {
+			throw new SecurityKeyInitializationException("Security key init failed", e);
+		}
+	}
 
 }

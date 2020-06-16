@@ -7,6 +7,12 @@ signature:
     - name: sina
       password: sina
       client-private-key-path: /client-private.pem
+      client-public-key-path: /client-public.pem
+      server-private-key-path: /server-private.pem
+      server-public-key-path: /server-public.pem
     - name: baidu
       password: baidu
       client-private-key-path: /client-private.pem
+      client-public-key-path: /client-public.pem
+      server-private-key-path: /server-private.pem
+      server-public-key-path: /server-public.pem

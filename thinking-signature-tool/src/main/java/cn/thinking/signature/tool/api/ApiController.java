@@ -1,5 +1,17 @@
 package cn.thinking.signature.tool.api;
 
+import java.util.List;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.PatchMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestController;
+
 import cn.thinking.signature.annotation.SignatureRequestRequired;
 import cn.thinking.signature.annotation.SignatureResponseRequired;
 import cn.thinking.signature.tool.pojo.ApiResponseBody;
@@ -7,17 +19,6 @@ import cn.thinking.signature.tool.pojo.RequestPojo;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PatchMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 /**
  * @Auther: ken.wangTJ
@@ -50,9 +51,9 @@ public class ApiController {
     
     @ApiOperation(value = "receive customer", notes = "receive customer")
     @ApiResponses(value = {@ApiResponse(code = 200, message = "receive information success")})
-    @GetMapping(value = "/v1/customer", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/v1/customer", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
-//    @SignatureRequestRequired
+    @SignatureRequestRequired
     public ApiResponseBody<?> customer() {
         logger.info("prepare receive info");
         ApiResponseBody<String> response = new ApiResponseBody<String>();

@@ -9,8 +9,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 import cn.thinking.signature.pojo.SignatureData;
-import cn.thinking.signature.tool.pojo.Client;
 import cn.thinking.signature.tool.pojo.SignatureResponse;
+import cn.thinking.signature.tool.pojo.ToolClient;
 import cn.thinking.signature.tool.utils.AuthUtils;
 import cn.thinking.signature.utils.SignatureUtils;
 
@@ -19,15 +19,15 @@ import cn.thinking.signature.utils.SignatureUtils;
 public class SignatureToolServiceImpl implements SignatureToolService {
     private static final Logger logger = LogManager.getLogger();
 
-    List<Client> clients;
+    List<ToolClient> clients;
 
-    public void setClients(List<Client> clients) {
+    public void setClients(List<ToolClient> clients) {
         this.clients = clients;
     }
 
     @Override
     public String generatorClientToken(String clientId) {
-        Client client = getClientByClientId(clientId);
+    	ToolClient client = getClientByClientId(clientId);
         if (client == null) {
             return null;
         }
@@ -37,7 +37,7 @@ public class SignatureToolServiceImpl implements SignatureToolService {
     @Override
     public SignatureResponse generateSignature(String clientId, SignatureData signatureData) {
         SignatureResponse response = new SignatureResponse();
-        Client client = getClientByClientId(clientId);
+        ToolClient client = getClientByClientId(clientId);
         if (client == null) {
             return response;
         }
@@ -61,11 +61,11 @@ public class SignatureToolServiceImpl implements SignatureToolService {
     }
 
     @Override
-    public Client getClientByClientId(String clientId) {
+    public ToolClient getClientByClientId(String clientId) {
         if (StringUtils.isEmpty(clientId)) {
             return null;
         }
-        for (Client client : this.clients) {
+        for (ToolClient client : this.clients) {
             if (client.getName().equals(clientId)) {
                 return client;
             }
