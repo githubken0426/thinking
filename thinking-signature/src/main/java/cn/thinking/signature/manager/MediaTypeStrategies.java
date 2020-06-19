@@ -49,4 +49,21 @@ public class MediaTypeStrategies {
 		}
 
 	}
+	
+	@Service
+	public class XMLMediaTypeStrategy extends MediaTypeBaseStrategy {
+
+		@Override
+		public List<MediaType> getMediaTypes() {
+			List<MediaType> list = new ArrayList<>();
+			list.add(MediaType.APPLICATION_XML);
+			return list;
+		}
+
+		@Override
+		protected void doHandle(SignatureData requestData, HttpServletRequest httpRequest) throws Exception {
+			logger.info("XMLMediaTypeStrategy doHandle");
+		}
+
+	}
 }
