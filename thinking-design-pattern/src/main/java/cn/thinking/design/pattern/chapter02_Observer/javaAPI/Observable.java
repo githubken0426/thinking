@@ -10,7 +10,7 @@ import java.util.Vector;
 public class Observable {
     private boolean changed = false;
     private Vector<Observer> obs;
-
+    
     /**
      * Construct an Observable with zero Observers.
      */

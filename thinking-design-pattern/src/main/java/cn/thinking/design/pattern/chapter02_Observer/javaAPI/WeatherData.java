@@ -38,10 +38,10 @@ public class WeatherData extends Observable {
          *
          * 此处并没有调用notifyObservers()传递数据对象 这表示我们使用的是pull(拉)
          */
-        notifyObservers();
+//        notifyObservers();
         /**
          * push(推)推模型  主题对象向观察者推送主题的详细信息，不管观察者是否需要，推送的信息通常是主题对象的全部或部分数据。
          */
-        //notifyObservers(this);
+        notifyObservers(this);
     }
 }

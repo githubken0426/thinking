@@ -26,7 +26,11 @@ public interface Subject {
      * <p>
      * 2017-6-13 上午11:06:33
      */
-    void notifyObserver();
+    void notifyObserver(Object arg);
+    
+    default void notifyObserver() {
+    	notifyObserver(null);
+    }
 
     void setMeasurements(String temperature, String humidity, String pressure);
 }
