@@ -1,0 +1,11 @@
+{
+	"name": "ofldjm",
+	"version": "0.0.1",
+	"author": "OFLDJM Framework",
+	"description": "reference project.",
+	"platforms": [
+		"electron",
+		"ios",
+		"windows"
+	]
+}
