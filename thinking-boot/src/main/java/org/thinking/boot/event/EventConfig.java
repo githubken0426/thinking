@@ -5,6 +5,6 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ComponentScan("org.thinking.boot.event")
-public class BeanConfig {
+public class EventConfig {
 	
 }

@@ -18,9 +18,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController(value = "/common")
 public class CommonController {
 
-	@GetMapping(name = "fullProperties", //类上的name值 + '#' + 方法的name值,类默认值是：类名所有大写字母拼装,方法默认值是：方法名
+	@GetMapping(name = "fullProperties", //name值 + '#' + 方法的name值,类默认值是：类名所有大写字母拼装,方法默认值是：方法名
 				value = { "/fullProperties", "/properties" }, 
-				params = {"id!=1","name" }, //仅处理请求中包含了名为“id”，值不能为“1”的请求,必须包含name参数
+				params = {"id!=1","name" }, //“id”，值不能为“1”的请求,必须包含name参数
 				headers = {"security=token1234" }, 
 				consumes = { MediaType.APPLICATION_JSON_VALUE }, 
 				produces = { MediaType.APPLICATION_JSON_VALUE })

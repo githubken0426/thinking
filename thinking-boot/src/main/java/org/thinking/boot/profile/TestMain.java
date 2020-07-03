@@ -22,7 +22,7 @@ public class TestMain {
 	public static void main(String[] args) throws IOException {
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
 		context.getEnvironment().setActiveProfiles("dev","sit");
-		context.register(BeanConfig.class);
+		context.register(ProfileConfig.class);
 		context.refresh();
 		BeanService bean=context.getBean(BeanService.class);
 		System.out.println(bean.getContent());

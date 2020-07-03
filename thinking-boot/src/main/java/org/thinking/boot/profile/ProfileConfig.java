@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Profile;
 
 @Configuration
 @ComponentScan("org.thinking.boot.profile")
-public class BeanConfig {
+public class ProfileConfig {
 	
 	@Bean
 	@Profile({"dev","sit"})
