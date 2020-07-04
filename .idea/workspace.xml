@@ -5,10 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47e90655-2c51-4fad-a667-04ab82a6a90d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_71.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thinking-boot/src/main/java/org/thinking/boot/thread/AsyncTaskService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thinking-boot/src/main/java/org/thinking/boot/thread/TaskExecuteConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thinking-boot/src/main/java/org/thinking/boot/thread/TestMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thinking-boot/thinking-boot.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/thinking_web_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/thinking_web_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_1_4_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_oauth_spring_security_oauth2_2_4_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_1_3_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_1_5_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_1_3_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_1_5_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_1_3_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_1_5_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thinking-python/thinking-python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-python/thinking-python.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thinking-signature-tool/src/main/java/cn/thinking/signature/tool/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-signature-tool/src/main/java/cn/thinking/signature/tool/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thinking-signature/src/main/java/cn/thinking/signature/aop/SignatureAnnotationAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-signature/src/main/java/cn/thinking/signature/aop/SignatureAnnotationAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinking-common/thinking-common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-common/thinking-common.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinking-concurrent/thinking-concurrent.iml" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-concurrent/thinking-concurrent.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinking-conf/thinking-conf.iml" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-conf/thinking-conf.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinking-data-structure/thinking-data-structure.iml" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-data-structure/thinking-data-structure.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinking-design-pattern/thinking-design-pattern.iml" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-design-pattern/thinking-design-pattern.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinking-signature-tool/thinking-signature-tool.iml" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-signature-tool/thinking-signature-tool.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinking-signature/thinking-signature.iml" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-signature/thinking-signature.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinking-web/thinking-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-web/thinking-web.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinking.iml" beforeDir="false" afterPath="$PROJECT_DIR$/thinking.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -22,6 +47,7 @@
     <ignored path="$PROJECT_DIR$/thinking-conf/target/" />
     <ignored path="$PROJECT_DIR$/thinking-signature/target/" />
     <ignored path="$PROJECT_DIR$/thinking-docs/target/" />
+    <ignored path="$PROJECT_DIR$/thinking-boot/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,34 +59,60 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/thinking-boot/src/main/java/org/thinking/boot/thread/TaskExecuteConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="14" column="30" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#449#450#0" expanded="true" />
+                <element signature="e#476#477#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.4.RELEASE/spring-context-5.1.4.RELEASE.jar!/org/springframework/scheduling/annotation/AsyncConfigurer.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/thinking-boot/src/main/java/org/thinking/boot/thread/AsyncTaskService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#298#299#0" expanded="true" />
+                <element signature="e#430#431#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/thinking-signature/src/main/java/cn/thinking/signature/aop/SignatureAnnotationAspect.java">
+        <entry file="file://$PROJECT_DIR$/thinking-boot/src/main/java/org/thinking/boot/thread/TestMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="133" column="31" lean-forward="true" selection-start-line="133" selection-start-column="31" selection-end-line="133" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/thinking-signature-tool/src/main/java/cn/thinking/signature/tool/api/ApiController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="52" column="37" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/thinking-signature/src/main/java/cn/thinking/signature/manager/BasicClientManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="161">
+              <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -84,9 +136,13 @@
         <option value="$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/list/ListMe.java" />
         <option value="$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/map/SortMap.java" />
         <option value="$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/map/lang/IterableMe.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/thinking-signature-tool/src/main/java/cn/thinking/signature/tool/WebSecurityConfig.java" />
         <option value="$PROJECT_DIR$/thinking-signature/src/main/java/cn/thinking/signature/aop/SignatureAnnotationAspect.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/thinking-boot/src/main/java/org/thinking/boot/thread/TaskExecuteConfig.java" />
+        <option value="$PROJECT_DIR$/thinking-boot/src/main/java/org/thinking/boot/thread/AsyncTaskConfig.java" />
+        <option value="$PROJECT_DIR$/thinking-boot/src/main/java/org/thinking/boot/thread/TestMain.java" />
+        <option value="$PROJECT_DIR$/thinking-boot/src/main/java/org/thinking/boot/thread/AsyncTaskService.java" />
       </list>
     </option>
   </component>
@@ -116,8 +172,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="25" />
-    <option name="y" value="430" />
+    <option name="x" value="17" />
+    <option name="y" value="478" />
     <option name="width" value="1755" />
     <option name="height" value="1030" />
   </component>
@@ -127,7 +183,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -139,126 +194,53 @@
             <path>
               <item name="thinking" type="b2602c69:ProjectViewProjectNode" />
               <item name="thinking" type="462c0819:PsiDirectoryNode" />
-              <item name="thinking-signature-tool" type="462c0819:PsiDirectoryNode" />
+              <item name="thinking-boot" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="thinking" type="b2602c69:ProjectViewProjectNode" />
               <item name="thinking" type="462c0819:PsiDirectoryNode" />
-              <item name="thinking-signature-tool" type="462c0819:PsiDirectoryNode" />
+              <item name="thinking-boot" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="thinking" type="b2602c69:ProjectViewProjectNode" />
               <item name="thinking" type="462c0819:PsiDirectoryNode" />
-              <item name="thinking-signature-tool" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="thinking" type="b2602c69:ProjectViewProjectNode" />
-              <item name="thinking" type="462c0819:PsiDirectoryNode" />
-              <item name="thinking-signature-tool" type="462c0819:PsiDirectoryNode" />
+              <item name="thinking-boot" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="thinking" type="b2602c69:ProjectViewProjectNode" />
               <item name="thinking" type="462c0819:PsiDirectoryNode" />
-              <item name="thinking-signature-tool" type="462c0819:PsiDirectoryNode" />
+              <item name="thinking-boot" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tool" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="thinking" type="b2602c69:ProjectViewProjectNode" />
               <item name="thinking" type="462c0819:PsiDirectoryNode" />
-              <item name="thinking-signature-tool" type="462c0819:PsiDirectoryNode" />
+              <item name="thinking-boot" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tool" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="boot" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="thinking" type="b2602c69:ProjectViewProjectNode" />
               <item name="thinking" type="462c0819:PsiDirectoryNode" />
-              <item name="thinking-signature-tool" type="462c0819:PsiDirectoryNode" />
+              <item name="thinking-boot" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tool" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="thinking" type="b2602c69:ProjectViewProjectNode" />
-              <item name="thinking" type="462c0819:PsiDirectoryNode" />
-              <item name="thinking-signature-tool" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tool" type="462c0819:PsiDirectoryNode" />
-              <item name="enumration" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="thinking" type="b2602c69:ProjectViewProjectNode" />
-              <item name="thinking" type="462c0819:PsiDirectoryNode" />
-              <item name="thinking-signature-tool" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tool" type="462c0819:PsiDirectoryNode" />
-              <item name="pojo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="thinking" type="b2602c69:ProjectViewProjectNode" />
-              <item name="thinking" type="462c0819:PsiDirectoryNode" />
-              <item name="thinking-signature-tool" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tool" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="thinking" type="b2602c69:ProjectViewProjectNode" />
-              <item name="thinking" type="462c0819:PsiDirectoryNode" />
-              <item name="thinking-signature-tool" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="thinking" type="b2602c69:ProjectViewProjectNode" />
-              <item name="thinking" type="462c0819:PsiDirectoryNode" />
-              <item name="thinking-web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="thinking" type="b2602c69:ProjectViewProjectNode" />
-              <item name="thinking" type="462c0819:PsiDirectoryNode" />
-              <item name="thinking-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="thinking" type="b2602c69:ProjectViewProjectNode" />
-              <item name="thinking" type="462c0819:PsiDirectoryNode" />
-              <item name="thinking-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="thinking" type="b2602c69:ProjectViewProjectNode" />
-              <item name="thinking" type="462c0819:PsiDirectoryNode" />
-              <item name="thinking-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="boot" type="462c0819:PsiDirectoryNode" />
+              <item name="scope" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -280,6 +262,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.thinking.boot.thread" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\WorkSpace\thinking\thinking-common\src\main\java\cn\thinking\map" />
       <recent name="G:\WorkSpace\thinking\thinking-common\src\main\java\cn\thinking\map\utils" />
@@ -300,7 +285,27 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SignatureToolApplication">
+  <component name="RunManager" selected="Application.TestMain">
+    <configuration name="TestMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.thinking.boot.thread.TestMain" />
+      <module name="thinking-boot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.thinking.boot.thread.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="thinking-boot" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.thinking.boot.BootApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SignatureToolApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="thinking-signature-tool" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="cn.thinking.signature.tool.SignatureToolApplication" />
@@ -322,7 +327,14 @@
     <list>
       <item itemvalue="Spring Boot.SignatureToolApplication" />
       <item itemvalue="Spring Boot.ThinkingApplication" />
+      <item itemvalue="Spring Boot.BootApplication" />
+      <item itemvalue="Application.TestMain" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TestMain" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -350,18 +362,19 @@
       <workItem from="1590218140437" duration="123000" />
       <workItem from="1590218570095" duration="100000" />
       <workItem from="1590459023983" duration="1786000" />
-      <workItem from="1592033961771" duration="2918000" />
+      <workItem from="1592033961771" duration="2971000" />
+      <workItem from="1593824156967" duration="3512000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11249000" />
+    <option name="totallyTimeSpent" value="14814000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29758713" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3016086" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -369,7 +382,6 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.6363636" />
@@ -385,6 +397,7 @@
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.32991204" />
       <window_info anchor="bottom" id="Inspection Results" order="14" weight="0.32991204" />
+      <window_info anchor="bottom" id="Messages" order="15" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -400,6 +413,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -422,70 +445,6 @@
     <SUITE FILE_PATH="coverage/thinking$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1558828691012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/thinking-python/chapter_01" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter01_Strategy/theProject/HandlerContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="29" column="57" selection-start-line="29" selection-start-column="57" selection-end-line="29" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter01_Strategy/theProject/HandlerStrategies.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter01_Strategy/theProject/HandlerStrategyService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter01_Strategy/theProject/AbstractHandlerStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-docs/pom.xml" />
-    <entry file="file://$PROJECT_DIR$/thinking-common/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="44" selection-start-line="10" selection-start-column="4" selection-end-line="11" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/hash/HSEquals.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/bit/BitMaskOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/bit/BinaryTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/bit/BitPermission.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/bit/BitOperation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-673">
@@ -666,13 +625,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2024">
-          <caret line="88" column="45" lean-forward="true" selection-start-line="88" selection-start-column="45" selection-end-line="88" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/thinking-data-structure/src/main/java/cn/thinking/data/structure/chapter_3/TableSimple.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
@@ -740,24 +692,114 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-signature-tool/src/main/java/cn/thinking/signature/tool/api/ApiController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1219">
+          <caret line="53" column="37" selection-start-line="53" selection-start-column="37" selection-end-line="53" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/thinking-signature/src/main/java/cn/thinking/signature/manager/BasicClientManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
+        <state relative-caret-position="598">
           <caret line="34" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-signature-tool/src/main/java/cn/thinking/signature/tool/api/ApiController.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="52" column="37" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="37" />
+        <state relative-caret-position="216">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/thinking-signature/src/main/java/cn/thinking/signature/aop/SignatureAnnotationAspect.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
-          <caret line="133" column="31" lean-forward="true" selection-start-line="133" selection-start-column="31" selection-end-line="133" selection-end-column="31" />
+          <caret line="133" column="31" selection-start-line="133" selection-start-column="31" selection-end-line="133" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-boot/src/main/java/org/thinking/boot/bean/bean.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-boot/src/main/java/org/thinking/boot/bean/TestMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-signature/target/classes/cn/thinking/signature/aop/SignatureAnnotationAspect.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="102" column="35" selection-start-line="102" selection-start-column="35" selection-end-line="102" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#7155#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-signature/src/main/java/cn/thinking/signature/manager/MediaTypeStrategies.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="30" column="61" selection-start-line="30" selection-start-column="61" selection-end-line="30" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.4.RELEASE/spring-context-5.1.4.RELEASE.jar!/org/springframework/scheduling/concurrent/ThreadPoolTaskExecutor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
+          <folding>
+            <element signature="e#1880#1881#0" expanded="true" />
+            <element signature="e#1974#1975#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.4.RELEASE/spring-context-5.1.4.RELEASE.jar!/org/springframework/scheduling/annotation/AsyncConfigurer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-boot/src/main/java/org/thinking/boot/thread/AsyncTaskConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="8" selection-start-line="8" selection-end-line="9" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-boot/src/main/java/org/thinking/boot/thread/TaskExecuteConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#449#450#0" expanded="true" />
+            <element signature="e#476#477#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-boot/src/main/java/org/thinking/boot/thread/AsyncTaskService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#298#299#0" expanded="true" />
+            <element signature="e#430#431#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-boot/src/main/java/org/thinking/boot/thread/TestMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
         </state>
       </provider>
     </entry>

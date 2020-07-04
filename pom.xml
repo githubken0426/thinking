@@ -9,6 +9,7 @@
 	<packaging>pom</packaging>
 	<version>1.0-SNAPSHOT</version>
 	<modules>
+		<module>thinking-boot</module>
 		<module>thinking-common</module>
 		<module>thinking-concurrent</module>
 		<module>thinking-design-pattern</module>
