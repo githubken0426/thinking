@@ -1,9 +1,6 @@
 package org.thinking.boot.thread;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.thinking.boot.scope.ScopeConfig;
-import org.thinking.boot.scope.ScopeService.PrototypeBean;
-import org.thinking.boot.scope.ScopeService.SingletonBean;
 
 public class TestMain {
     public static void main(String[] args) {
@@ -13,6 +10,7 @@ public class TestMain {
             service.executeAsyncTask(i);
             service.executeAsyncTaskPlus(i);
         }
+        context.getBean(ScheduleTaskService.class);
         context.close();
     }
 }

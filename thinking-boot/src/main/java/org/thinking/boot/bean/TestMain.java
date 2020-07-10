@@ -27,5 +27,7 @@ public class TestMain {
 		context.getBean(InitializingBean.class);
 		context.getBean(BeanWayService.class);
 		context.close();
+		
+		System.out.println(context.getClass().getName());
 	}
 }
