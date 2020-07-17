@@ -11,10 +11,13 @@ import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Component;
 
 /**
- * Aware子接口 描述 BeanNameAware 获取容器中 Bean 的名称 BeanFactoryAware 获取当前 BeanFactory
- * ，这样可以调用容器的服务 ApplicationContextAware 同上，在BeanFactory 和 ApplicationContext 的区别
- * 中已明确说明 MessageSourceAware 获取 Message Source 相关文本信息
- * ApplicationEventPublisherAware 发布事件 ResourceLoaderAware 获取资源加载器，这样获取外部资源文件
+ *   Aware子接口                                              |       描述 
+ * BeanNameAware                 |  获取容器中 Bean 的名称 
+ * BeanFactoryAware              |  获得BeanFactory对象，可以用来检测Bean的作用域
+ * ApplicationContextAware       |  获得ApplicationContext对象,可以用来获取所有Bean definition的名字
+ * MessageSourceAware            |  获取 Message Source 相关文本信息
+ * ApplicationEventPublisherAware|  发布事件 
+ * ResourceLoaderAware           |  获得ResourceLoader对象，这样获取外部资源文件
  * 
  * @author kun.f.wang
  *
