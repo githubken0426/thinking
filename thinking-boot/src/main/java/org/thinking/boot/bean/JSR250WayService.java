@@ -7,12 +7,12 @@ public class JSR250WayService {
 	
 	@PostConstruct
 	public void init() {
-		System.out.println("JSR250WayService init");
+		System.out.println("* JSR250WayService @PostConstruct init");
 	}
 	
 	@PreDestroy
 	public void destroy() {
-		System.out.println("JSR250WayService destroy");
+		System.out.println("* JSR250WayService @PreDestroy destroy");
 	}
 	
 }
