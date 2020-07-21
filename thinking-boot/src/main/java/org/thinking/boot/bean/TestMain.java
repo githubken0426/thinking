@@ -31,8 +31,8 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
    * 如果Bean在配置文件中的定义包含init-method属性，执行指定的方法。
    * 如果有和加载这个Bean的Spring容器相关的BeanPostProcessor对象，执行postProcessAfterInitialization()方法
  * 
-   *    当要销毁Bean的时候，如果Bean实现了DisposableBean接口，执行destroy()方法。
-   *    当要销毁Bean的时候，如果Bean在配置文件中的定义包含destroy-method属性，执行指定的方法。
+   * 当要销毁Bean的时候，如果Bean实现了DisposableBean接口，执行destroy()方法。
+   * 当要销毁Bean的时候，如果Bean在配置文件中的定义包含destroy-method属性，执行指定的方法。
  * 
  * @author kun.f.wang 详细见图spring-bean-life.ong/bean.jpg
  */
