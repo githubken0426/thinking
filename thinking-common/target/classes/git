@@ -1,6 +1,0 @@
-git remote add origin git@gitee.com:longdcheng/cheng_pro.git
-将代码推送到远程仓库
-git push origin master
-
-# 注意，如果出现，推送失败可能就需要运行强推(因为此时代码可能不是基于仓库中代码进行的修改)
-git push -f origin master
