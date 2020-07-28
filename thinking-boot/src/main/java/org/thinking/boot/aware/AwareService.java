@@ -23,7 +23,7 @@ import org.springframework.stereotype.Component;
  *
  */
 @Component
-public class BeanAwareService implements BeanNameAware, ResourceLoaderAware {
+public class AwareService implements BeanNameAware, ResourceLoaderAware {
 	private String name;
 	private ResourceLoader resourceLoader;
 
