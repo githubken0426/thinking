@@ -8,7 +8,7 @@ public class InitializingBeanService implements InitializingBean {
 
 	@Override
 	public void afterPropertiesSet() throws Exception {
-		System.out.println("*7 InitializingBean's afterPropertiesSet");
+		System.out.println("* InitializingBean's afterPropertiesSet");
 	}
 
 }

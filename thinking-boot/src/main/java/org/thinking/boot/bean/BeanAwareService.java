@@ -9,15 +9,16 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.ApplicationEventPublisherAware;
+import org.springframework.context.MessageSource;
+import org.springframework.context.MessageSourceAware;
 import org.springframework.context.ResourceLoaderAware;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Component;
 
 @Component
-public class BeanAwareService implements  BeanNameAware, BeanFactoryAware, ApplicationContextAware,
-		ApplicationEventPublisherAware, ResourceLoaderAware, BeanClassLoaderAware {
-	
-	
+public class BeanAwareService implements BeanNameAware, BeanFactoryAware, ApplicationContextAware,
+		ApplicationEventPublisherAware, ResourceLoaderAware, BeanClassLoaderAware, MessageSourceAware {
+
 	@Override
 	public void setBeanName(String name) {
 		System.out.println("*1 BeanNameAware's setBeanName");
@@ -27,10 +28,12 @@ public class BeanAwareService implements  BeanNameAware, BeanFactoryAware, Appli
 	public void setBeanClassLoader(ClassLoader classLoader) {
 		System.out.println("*2 BeanClassLoaderAware's setBeanClassLoader");
 	}
+
 	@Override
 	public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
 		System.out.println("*3 BeanFactoryAware's setBeanFactory");
 	}
+
 	@Override
 	public void setResourceLoader(ResourceLoader resourceLoader) {
 		System.out.println("*4 ResourceLoaderAware's setResourceLoader");
@@ -42,8 +45,13 @@ public class BeanAwareService implements  BeanNameAware, BeanFactoryAware, Appli
 	}
 
 	@Override
+	public void setMessageSource(MessageSource messageSource) {
+		System.out.println("*6 MessageSource's setMessageSource");
+	}
+
+	@Override
 	public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-		System.out.println("*6 ApplicationContextAware's setApplicationContext");
+		System.out.println("*7 ApplicationContextAware's setApplicationContext");
 	}
 
 }
