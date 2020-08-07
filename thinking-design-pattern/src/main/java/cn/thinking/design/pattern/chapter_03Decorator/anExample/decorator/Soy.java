@@ -1,6 +1,7 @@
 package cn.thinking.design.pattern.chapter_03Decorator.anExample.decorator;
 
 import cn.thinking.design.pattern.chapter_03Decorator.anExample.beverage.Beverage;
+
 /**
  * 具体的装饰者
  * 
@@ -16,7 +17,7 @@ public class Soy extends CondimentDecorator {
 
 	@Override
 	public double cost() {
-		double result=beverage.cost();
+		double result = beverage.cost();
 		return 1.5 + result;
 	}
 
