@@ -1,4 +1,4 @@
-package cn.thinking.design.pattern.chapter_03Decorator.theAnswer;
+package cn.thinking.design.pattern.chapter03_Decorator.theAnswer;
 
 import java.io.FilterInputStream;
 import java.io.InputStream;

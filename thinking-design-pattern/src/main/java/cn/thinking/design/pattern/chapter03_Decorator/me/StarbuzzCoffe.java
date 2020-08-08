@@ -1,4 +1,4 @@
-package cn.thinking.design.pattern.chapter_03Decorator.me;
+package cn.thinking.design.pattern.chapter03_Decorator.me;
 
 public class StarbuzzCoffe {
 	public static void main(String[] args) {

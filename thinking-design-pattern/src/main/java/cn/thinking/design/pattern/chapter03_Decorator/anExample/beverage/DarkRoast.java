@@ -1,4 +1,4 @@
-package cn.thinking.design.pattern.chapter_03Decorator.anExample.beverage;
+package cn.thinking.design.pattern.chapter03_Decorator.anExample.beverage;
 
 public class DarkRoast extends Beverage {
 	public DarkRoast() {

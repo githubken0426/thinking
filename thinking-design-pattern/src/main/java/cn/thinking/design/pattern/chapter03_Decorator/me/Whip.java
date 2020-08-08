@@ -1,12 +1,5 @@
-package cn.thinking.design.pattern.chapter_03Decorator.anExample.decorator;
+package cn.thinking.design.pattern.chapter03_Decorator.me;
 
-import cn.thinking.design.pattern.chapter_03Decorator.anExample.beverage.Beverage;
-
-/**
- * 具体的装饰者
- * 
- * @author ken 2017-6-15 pm 03:08:04
- */
 public class Whip extends CondimentDecorator {
 	Beverage beverage;
 
@@ -17,8 +10,8 @@ public class Whip extends CondimentDecorator {
 
 	@Override
 	public double cost() {
-		double result = beverage.cost();
-		return 2.0 + result;
+		double discount = getDiscount();
+		return (1+ beverage.cost()) * discount;
 	}
 
 	@Override

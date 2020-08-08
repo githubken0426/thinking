@@ -1,4 +1,6 @@
-package cn.thinking.design.pattern.chapter_03Decorator.me;
+package cn.thinking.design.pattern.chapter03_Decorator.anExample.decorator;
+
+import cn.thinking.design.pattern.chapter03_Decorator.anExample.beverage.Beverage;
 
 /**
  * 抽象装饰者
@@ -11,5 +13,4 @@ public abstract class CondimentDecorator extends Beverage {
 	public abstract double cost();
 	
 	public abstract String getDescription();
-	
 }

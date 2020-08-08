@@ -1,7 +1,7 @@
-package cn.thinking.design.pattern.chapter_03Decorator.anExample;
+package cn.thinking.design.pattern.chapter03_Decorator.anExample;
 
-import cn.thinking.design.pattern.chapter_03Decorator.anExample.beverage.*;
-import cn.thinking.design.pattern.chapter_03Decorator.anExample.decorator.*;
+import cn.thinking.design.pattern.chapter03_Decorator.anExample.beverage.*;
+import cn.thinking.design.pattern.chapter03_Decorator.anExample.decorator.*;
 
 public class StarbuzzCoffe {
 	public static void main(String[] args) {

@@ -1,6 +1,6 @@
-package cn.thinking.design.pattern.chapter_03Decorator.anExample.decorator;
+package cn.thinking.design.pattern.chapter03_Decorator.anExample.decorator;
 
-import cn.thinking.design.pattern.chapter_03Decorator.anExample.beverage.Beverage;
+import cn.thinking.design.pattern.chapter03_Decorator.anExample.beverage.Beverage;
 
 /**
  * 具体的装饰者
