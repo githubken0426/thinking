@@ -5,7 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47e90655-2c51-4fad-a667-04ab82a6a90d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/thinking_web_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/thinking_web_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_4.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinking-boot/thinking-boot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-boot/thinking-boot.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinking-common/thinking-common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-common/thinking-common.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinking-concurrent/thinking-concurrent.iml" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-concurrent/thinking-concurrent.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinking-conf/thinking-conf.iml" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-conf/thinking-conf.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinking-data-structure/thinking-data-structure.iml" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-data-structure/thinking-data-structure.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinking-design-pattern/thinking-design-pattern.iml" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-design-pattern/thinking-design-pattern.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinking-signature-tool/thinking-signature-tool.iml" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-signature-tool/thinking-signature-tool.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinking-signature/thinking-signature.iml" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-signature/thinking-signature.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinking-web/thinking-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-web/thinking-web.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinking.iml" beforeDir="false" afterPath="$PROJECT_DIR$/thinking.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -30,7 +44,56 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter04_Factory/factoryMethod/NYStylePizzaStore.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter04_Factory/factoryMethod/ChicagoStylePizzaStore.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter04_Factory/anExample/SimplePizzaFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/thinking-design-pattern/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="460">
+              <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+              <folding>
+                <element signature="n#dependencyManagement#0;n#project#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -43,7 +106,12 @@
     <findStrings>
       <find>.security.oauth</find>
       <find>APP_HOME</find>
+      <find>designPattern.headfirst.</find>
+      <find>commons-lang</find>
     </findStrings>
+    <replaceStrings>
+      <replace>cn.thinking.design.pattern.</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -63,11 +131,44 @@
         <option value="$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/map/lang/IterableMe.java" />
         <option value="$PROJECT_DIR$/thinking-signature-tool/src/main/java/cn/thinking/signature/tool/WebSecurityConfig.java" />
         <option value="$PROJECT_DIR$/thinking-signature/src/main/java/cn/thinking/signature/aop/SignatureAnnotationAspect.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/thinking-boot/src/main/java/org/thinking/boot/thread/TaskExecuteConfig.java" />
         <option value="$PROJECT_DIR$/thinking-boot/src/main/java/org/thinking/boot/thread/AsyncTaskConfig.java" />
         <option value="$PROJECT_DIR$/thinking-boot/src/main/java/org/thinking/boot/thread/TestMain.java" />
         <option value="$PROJECT_DIR$/thinking-boot/src/main/java/org/thinking/boot/thread/AsyncTaskService.java" />
+        <option value="$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter_04Factory/abstractFactory/ingredent/chicago/ChicagoCheese.java" />
+        <option value="$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter_04Factory/abstractFactory/ingredent/chicago/ChicagoDough.java" />
+        <option value="$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter_04Factory/abstractFactory/ingredent/chicago/ChicagoSauce.java" />
+        <option value="$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter_04Factory/abstractFactory/ingredent/ny/NYCheese.java" />
+        <option value="$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter_04Factory/abstractFactory/ingredent/ny/NYDough.java" />
+        <option value="$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter_04Factory/abstractFactory/ingredent/ny/NYSauce.java" />
+        <option value="$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter_04Factory/abstractFactory/ingredent/Cheese.java" />
+        <option value="$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter_04Factory/abstractFactory/ingredent/Dough.java" />
+        <option value="$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter_04Factory/abstractFactory/ingredent/Sauce.java" />
+        <option value="$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter_04Factory/abstractFactory/ingredentFactory/ChicagoPizzaIngredientFactory.java" />
+        <option value="$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter_04Factory/abstractFactory/ingredentFactory/NYPizzaIngredientFactory.java" />
+        <option value="$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter_04Factory/abstractFactory/ingredentFactory/PizzaIngredientFactory.java" />
+        <option value="$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter_04Factory/abstractFactory/pizza/CheesePizza.java" />
+        <option value="$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter_04Factory/abstractFactory/pizza/Pizza.java" />
+        <option value="$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter_04Factory/abstractFactory/pizza/VeggiePizza.java" />
+        <option value="$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter_04Factory/abstractFactory/Test.java" />
+        <option value="$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter_04Factory/abstractFactory/store/ChicagoPizzaStore.java" />
+        <option value="$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter_04Factory/abstractFactory/store/NYPizzaStore.java" />
+        <option value="$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter_04Factory/abstractFactory/store/PizzaStore.java" />
+        <option value="$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter_04Factory/anExample/PizzaStore.java" />
+        <option value="$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter_04Factory/anExample/SimplePizzaFactory.java" />
+        <option value="$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter_04Factory/anExample/Test.java" />
+        <option value="$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter_04Factory/factoryMethod/ChicagoStyleCheesePizza.java" />
+        <option value="$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter_04Factory/factoryMethod/ChicagoStylePizzaStore.java" />
+        <option value="$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter_04Factory/factoryMethod/NYStyleCheesePizza.java" />
+        <option value="$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter_04Factory/factoryMethod/Pizza.java" />
+        <option value="$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter_04Factory/factoryMethod/PizzaStore.java" />
+        <option value="$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter_04Factory/factoryMethod/Test.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter_04Factory/factoryMethod/NYStylePizzaStore.java" />
+        <option value="$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter04_Factory/anExample/SimplePizzaFactory.java" />
+        <option value="$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter04_Factory/factoryMethod/NYStylePizzaStore.java" />
+        <option value="$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter04_Factory/factoryMethod/ChicagoStylePizzaStore.java" />
+        <option value="$PROJECT_DIR$/thinking-design-pattern/pom.xml" />
       </list>
     </option>
   </component>
@@ -109,7 +210,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -117,10 +217,60 @@
               <item name="thinking" type="b2602c69:ProjectViewProjectNode" />
               <item name="thinking" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="thinking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thinking" type="462c0819:PsiDirectoryNode" />
+              <item name="thinking-design-pattern" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="thinking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thinking" type="462c0819:PsiDirectoryNode" />
+              <item name="thinking-design-pattern" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="thinking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thinking" type="462c0819:PsiDirectoryNode" />
+              <item name="thinking-design-pattern" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="thinking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thinking" type="462c0819:PsiDirectoryNode" />
+              <item name="thinking-design-pattern" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="thinking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thinking" type="462c0819:PsiDirectoryNode" />
+              <item name="thinking-design-pattern" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pattern" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="thinking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thinking" type="462c0819:PsiDirectoryNode" />
+              <item name="thinking-design-pattern" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pattern" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter04_Factory" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="thinking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -245,16 +395,18 @@
       <workItem from="1592033961771" duration="2971000" />
       <workItem from="1593824156967" duration="3519000" />
       <workItem from="1595050327499" duration="48000" />
+      <workItem from="1596864961429" duration="841000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14869000" />
+    <option name="totallyTimeSpent" value="15710000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30563003" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30965146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -272,7 +424,7 @@
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32991204" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.32991204" />
@@ -325,213 +477,6 @@
     <SUITE FILE_PATH="coverage/thinking$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1558828691012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/thinking-python/chapter_01" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/bit/BitOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-673">
-          <caret line="69" column="17" lean-forward="true" selection-start-line="69" selection-start-column="17" selection-end-line="69" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-common/src/main/resources/git">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/map/MyMap.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/list/ListMe.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/list/AbstractCollectionMe.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/list/AbstractListMe.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="681" column="6" selection-start-line="681" selection-start-column="6" selection-end-line="681" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/list/ArrayListMe.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/list/ArraysMe.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/list/CollectionMe.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/list/CollectionsMe.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/list/IteratorMe.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/list/ListIteratorMe.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/map/SortMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/map/lang/IterableMe.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-common/src/main/java/cn/thinking/map/MapKey.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-signature/src/main/java/cn/thinking/signature/TestMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="13" column="57" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-signature/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-521">
-          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-signature/src/main/java/cn/thinking/signature/annotation/EnableAutoSignatureConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="14" column="42" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-signature-tool/src/main/java/cn/thinking/signature/tool/controller/OAuthController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-signature/src/main/java/cn/thinking/signature/SignatureConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-signature/src/main/java/cn/thinking/signature/annotation/SignatureRequestRequired.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-signature/src/main/java/cn/thinking/signature/annotation/SignatureResponseRequired.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-signature/src/main/java/cn/thinking/signature/service/SignatureService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-signature/src/main/java/cn/thinking/signature/service/DefaultSignatureService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-signature-tool/src/main/java/cn/thinking/signature/tool/enumration/PartnerEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-signature/src/main/java/cn/thinking/signature/manager/MediaTypeBaseStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-data-structure/src/main/java/cn/thinking/data/structure/chapter_3/TableSimple.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-conf/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="35" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-data-structure/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-signature-tool/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinking-signature-tool/src/main/resources/log4j2.component.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/thinking-signature-tool/src/main/resources/log4j2.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="93">
@@ -583,13 +528,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="598">
           <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -674,6 +612,235 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
           <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter04_Factory/abstractFactory/ingredent/chicago/ChicagoDough.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter04_Factory/abstractFactory/ingredent/chicago/ChicagoSauce.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter04_Factory/abstractFactory/ingredent/ny/NYCheese.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter04_Factory/abstractFactory/ingredent/ny/NYDough.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter04_Factory/abstractFactory/ingredent/ny/NYSauce.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter04_Factory/abstractFactory/ingredent/Cheese.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="32" selection-start-column="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter04_Factory/abstractFactory/ingredent/Dough.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="32" selection-start-column="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter04_Factory/abstractFactory/ingredent/Sauce.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="32" selection-start-column="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter04_Factory/abstractFactory/ingredentFactory/ChicagoPizzaIngredientFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter04_Factory/abstractFactory/ingredentFactory/NYPizzaIngredientFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter04_Factory/abstractFactory/ingredentFactory/PizzaIngredientFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter04_Factory/abstractFactory/pizza/CheesePizza.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter04_Factory/abstractFactory/pizza/Pizza.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter04_Factory/abstractFactory/pizza/VeggiePizza.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter04_Factory/abstractFactory/ingredent/chicago/ChicagoCheese.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter04_Factory/abstractFactory/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter04_Factory/abstractFactory/store/ChicagoPizzaStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-20">
+          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter04_Factory/abstractFactory/store/NYPizzaStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-20">
+          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter04_Factory/abstractFactory/store/PizzaStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter04_Factory/anExample/PizzaStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-15">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter04_Factory/anExample/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="32" selection-start-column="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter04_Factory/factoryMethod/ChicagoStyleCheesePizza.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="32" selection-start-column="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter04_Factory/factoryMethod/NYStyleCheesePizza.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="32" selection-start-column="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter04_Factory/factoryMethod/Pizza.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="32" selection-start-column="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter04_Factory/factoryMethod/PizzaStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-53">
+          <caret column="32" selection-start-column="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter04_Factory/factoryMethod/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="32" selection-start-column="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+          <folding>
+            <element signature="n#dependencyManagement#0;n#project#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1.pom">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter04_Factory/anExample/SimplePizzaFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter04_Factory/factoryMethod/NYStylePizzaStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-design-pattern/src/main/java/cn/thinking/design/pattern/chapter04_Factory/factoryMethod/ChicagoStylePizzaStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinking-design-pattern/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
         </state>
       </provider>
     </entry>
