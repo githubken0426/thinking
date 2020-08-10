@@ -1,7 +1,7 @@
-package designPattern.headfirst.chapter_06Command.macro;
+package cn.thinking.design.pattern.chapter06_Command.macro;
 
-import designPattern.headfirst.chapter_06Command.macro.command.*;
-import designPattern.headfirst.chapter_06Command.macro.receiver.*;
+import cn.thinking.design.pattern.chapter06_Command.macro.command.*;
+import cn.thinking.design.pattern.chapter06_Command.macro.receiver.*;
 /**
  * 宏命令
  * @author ken

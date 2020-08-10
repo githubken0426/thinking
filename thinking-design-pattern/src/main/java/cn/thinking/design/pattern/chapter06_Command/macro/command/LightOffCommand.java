@@ -1,6 +1,6 @@
-package designPattern.headfirst.chapter_06Command.macro.command;
+package cn.thinking.design.pattern.chapter06_Command.macro.command;
 
-import designPattern.headfirst.chapter_06Command.macro.receiver.Light;
+import cn.thinking.design.pattern.chapter06_Command.macro.receiver.Light;
 
 public class LightOffCommand implements Command {
 	Light light;

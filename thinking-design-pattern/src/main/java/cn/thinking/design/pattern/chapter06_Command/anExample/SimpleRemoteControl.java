@@ -1,6 +1,6 @@
-package designPattern.headfirst.chapter_06Command.anExample;
+package cn.thinking.design.pattern.chapter06_Command.anExample;
 
-import designPattern.headfirst.chapter_06Command.anExample.command.Command;
+import cn.thinking.design.pattern.chapter06_Command.anExample.command.Command;
 /**
  * 调用者invoker
  * @author ken

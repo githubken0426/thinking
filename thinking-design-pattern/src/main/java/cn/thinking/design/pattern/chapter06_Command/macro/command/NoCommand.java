@@ -1,4 +1,4 @@
-package designPattern.headfirst.chapter_06Command.macro.command;
+package cn.thinking.design.pattern.chapter06_Command.macro.command;
 
 /**
  * 空对象，不实现任何东西

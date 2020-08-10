@@ -1,9 +1,9 @@
-package designPattern.headfirst.chapter_06Command.anExample;
+package cn.thinking.design.pattern.chapter06_Command.anExample;
 
-import designPattern.headfirst.chapter_06Command.anExample.command.ChargeDoorOpenCommand;
-import designPattern.headfirst.chapter_06Command.anExample.command.LightOnCommand;
-import designPattern.headfirst.chapter_06Command.anExample.receiver.ChargeDoor;
-import designPattern.headfirst.chapter_06Command.anExample.receiver.Light;
+import cn.thinking.design.pattern.chapter06_Command.anExample.command.ChargeDoorOpenCommand;
+import cn.thinking.design.pattern.chapter06_Command.anExample.command.LightOnCommand;
+import cn.thinking.design.pattern.chapter06_Command.anExample.receiver.ChargeDoor;
+import cn.thinking.design.pattern.chapter06_Command.anExample.receiver.Light;
 /**
  * 客户端
  * @author ken

@@ -1,4 +1,4 @@
-package designPattern.headfirst.chapter_06Command.anExample.command;
+package cn.thinking.design.pattern.chapter06_Command.anExample.command;
 /**
  * 命令模式
  * @author ken

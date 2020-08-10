@@ -1,4 +1,4 @@
-package designPattern.headfirst.chapter_06Command.anExample.receiver;
+package cn.thinking.design.pattern.chapter06_Command.anExample.receiver;
 /**
  * 接收者
  * @author ken

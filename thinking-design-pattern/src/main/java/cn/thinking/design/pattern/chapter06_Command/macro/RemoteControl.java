@@ -1,7 +1,7 @@
-package designPattern.headfirst.chapter_06Command.macro;
+package cn.thinking.design.pattern.chapter06_Command.macro;
 
-import designPattern.headfirst.chapter_06Command.macro.command.Command;
-import designPattern.headfirst.chapter_06Command.macro.command.NoCommand;
+import cn.thinking.design.pattern.chapter06_Command.macro.command.Command;
+import cn.thinking.design.pattern.chapter06_Command.macro.command.NoCommand;
 
 /**
  * 遥控器

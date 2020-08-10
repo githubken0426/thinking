@@ -1,4 +1,4 @@
-package designPattern.headfirst.chapter_06Command.macro.receiver;
+package cn.thinking.design.pattern.chapter06_Command.macro.receiver;
 /**
  * 接收者
  * @author ken

@@ -1,6 +1,6 @@
-package designPattern.headfirst.chapter_06Command.macro.command;
+package cn.thinking.design.pattern.chapter06_Command.macro.command;
 
-import designPattern.headfirst.chapter_06Command.macro.receiver.ChargeDoor;
+import cn.thinking.design.pattern.chapter06_Command.macro.receiver.ChargeDoor;
 
 public class ChargeDoorOpenCommand implements Command {
 	ChargeDoor door;

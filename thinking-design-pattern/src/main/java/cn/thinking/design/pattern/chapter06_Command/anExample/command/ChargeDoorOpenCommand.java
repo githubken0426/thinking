@@ -1,6 +1,6 @@
-package designPattern.headfirst.chapter_06Command.anExample.command;
+package cn.thinking.design.pattern.chapter06_Command.anExample.command;
 
-import designPattern.headfirst.chapter_06Command.anExample.receiver.ChargeDoor;
+import cn.thinking.design.pattern.chapter06_Command.anExample.receiver.ChargeDoor;
 
 public class ChargeDoorOpenCommand implements Command {
 	ChargeDoor door;
