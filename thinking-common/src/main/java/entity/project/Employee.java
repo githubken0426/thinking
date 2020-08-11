@@ -6,7 +6,6 @@ package entity.project;
  * @Description:
  */
 public class Employee {
-    private static final long serialVersionUID = 1L;
     private Long id;
     private int age;
     private String name;

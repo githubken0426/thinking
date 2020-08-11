@@ -10,7 +10,9 @@ import java.util.Set;
 @DynamicUpdate(true)
 @Table(name = "t_table")
 public class Application extends BaseEntity {
-    @Id
+	private static final long serialVersionUID = 1L;
+
+	@Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequence_name")
     @SequenceGenerator(name = "sequence_name", sequenceName = "sequence_name", allocationSize = 1)
     private long id;
