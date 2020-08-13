@@ -1,0 +1,15 @@
+one:修改已提交的comment
+git commit --amend
+1、键入：i，此时进入了编辑模式
+2、修改完成后，按下 Esc键退出编辑模式
+3、键入 :wq+Enter键退出并保存修改，完成提交.
+
+two:合并多个提交
+一、git rebase -i HEAD~2
+
+1 pick 56a06ef change 1:xxx
+2 pick edbeab5 change 2:xxx
+
+二、将某个pick改为s（squash），将此提交与之前的提交合
+三、git commit -a，修改出现的vim，将多条comment信息合并为一条
+四、git push origin master -f
