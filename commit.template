@@ -1,8 +1,4 @@
 # header: <type>(<scope>): <subject>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> dd2b8a97f06a1c2390acb87853b829531ec6f598
 # - type: feat, fix, docs, style, refactor,perf, test, chore,revert
 			feat: 新增feature 
 			fix: 修复bug 
@@ -13,21 +9,6 @@
 			test: 测试用例，包括单元测试、集成测试。 
 			chore: 改变构建流程、或者增加依赖库、工具等。 
 			revert: 版本回滚
-		
-<<<<<<< HEAD
-=======
-# - type: feat, fix, docs, style, refactor, test, chore
-		feat: 新功能(feature)
-		fix: 修复 bug
-		docs: 文档(documents)
-		style: 代码格式(不影响代码运行的格式变动，注意不是指 CSS 的修改)
-		refactor: 重构(既不是新增功能，也不是修改 bug 的代码变动)
-		test: 提交测试代码(单元测试，集成测试等)
-		chore: 构建或辅助工具的变动
-		misc: 一些未归类或不知道将它归类到什么方面的提交
->>>>>>> 1dc5821... docs(none):update git commit normalize document
-=======
->>>>>>> dd2b8a97f06a1c2390acb87853b829531ec6f598
 # - scope: can be empty,说明 commit 影响的范围，比如数据层，控制层，视图层等等，这个需要视具体场景与项目的不同而灵活变动
 # - subject: start with verb (such as 'change'), 50-character line,
 		使用第一人称现在时的动词开头，比如 modify 而不是 modified 或 modifies首字母小写，并且结尾不加句号
