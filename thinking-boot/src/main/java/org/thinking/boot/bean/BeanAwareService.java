@@ -1,5 +1,8 @@
 package org.thinking.boot.bean;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanClassLoaderAware;
 import org.springframework.beans.factory.BeanFactory;
@@ -16,8 +19,9 @@ import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Component;
 
 @Component
-public class BeanAwareService implements BeanNameAware, BeanFactoryAware, ApplicationContextAware,
-		ApplicationEventPublisherAware, ResourceLoaderAware, BeanClassLoaderAware, MessageSourceAware {
+public class BeanAwareService
+		implements BeanNameAware, BeanClassLoaderAware, BeanFactoryAware, ResourceLoaderAware, ApplicationContextAware,
+		ApplicationEventPublisherAware, MessageSourceAware {
 
 	@Override
 	public void setBeanName(String name) {
@@ -54,4 +58,13 @@ public class BeanAwareService implements BeanNameAware, BeanFactoryAware, Applic
 		System.out.println("*7 ApplicationContextAware's setApplicationContext");
 	}
 
+	@PostConstruct
+	public void init() {
+		System.out.println("*8 @PostConstruct init");
+	}
+
+	@PreDestroy
+	public void destroy() {
+		System.out.println("*9 @PreDestroy destroy");
+	}
 }

@@ -39,6 +39,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class TestMain {
 	public static void main(String[] args) throws IOException {
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(BeanConfig.class);
+		context.getBean(BeanWayService.class);
 		context.close();
 		System.out.println(context.getClass().getName());
 	}

@@ -4,6 +4,7 @@ package org.thinking.boot.bean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
 
 @Configuration
 @ComponentScan("org.thinking.boot.bean")
@@ -18,7 +19,7 @@ public class BeanConfig {
 //			}
 //		};
 //	}
-
+	@Lazy
 	@Bean(initMethod = "init", destroyMethod = "destroy")
 	public BeanWayService beanWayService() {
 		return new BeanWayService();
