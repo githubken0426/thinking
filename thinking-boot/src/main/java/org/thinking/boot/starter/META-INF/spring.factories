@@ -1,0 +1,19 @@
+#-------自定义starter---------
+#1.编写PropertiesReader属性类， @ConfigurationProperties，指定prefix。（字段需要和yaml中字段对应，Camel-Case自动转换）
+#2.编写config类ReaderConfig
+@@Configuration
+#@EnableConfigurationProperties(PropertiesReader.class)
+#@ConditionalOnProperty(prefix = "properties", name = "switch", havingValue = "true")
+
+#3.pom.xml中packaging指定为jar。<packaging>jar</packaging>
+#4.resource中新建META-INF文件夹，新建spring.factories文件，增加以下内容
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=properties.ReaderConfig
+
+#5.执行maven clean, maven install
+#6.引用项目中追加
+#		   <dependency>
+#				<groupId>my.starter</groupId>
+#				<artifactId>my-starter</artifactId>
+#				<version>0.0.1-SNAPSHOT</version>
+#			</dependency>
+#7.yaml中追加prefix属性

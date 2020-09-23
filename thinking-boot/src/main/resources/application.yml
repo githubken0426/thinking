@@ -2,3 +2,8 @@ server:
   port: 8091
   servlet:
     context-path: /thinking-cors
+
+properties:
+  switch: true
+  say-what: hello
+  to-who: ultro

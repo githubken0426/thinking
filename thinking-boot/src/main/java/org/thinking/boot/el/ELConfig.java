@@ -14,7 +14,7 @@ import org.springframework.core.io.support.PropertySourceFactory;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Configuration
-@PropertySource(name = "elConfig", value = {"classpath:package.json" }, 
+@PropertySource(name = "readerConfig", value = {"classpath:package.json" }, 
 				ignoreResourceNotFound = false, encoding = "UTF-8", 
 				factory = JsonPropertySourceFactory.class)
 @ComponentScan("org.thinking.boot.el")
