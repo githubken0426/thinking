@@ -42,7 +42,7 @@ public class BufferDemo {
 		RandomAccessFile file = new RandomAccessFile(PATH, "rw");
 		FileChannel channel = file.getChannel();
 		ByteBuffer buffer = ByteBuffer.allocate(48);
-		int bytesRead = channel.read(buffer); // read into buffer.
+		int bytesRead = channel.read(buffer); // read into buffer.如果返回-1，表示到了文件末尾
 		while (bytesRead != -1) {
 			// make buffer ready for read
 			buffer.flip();

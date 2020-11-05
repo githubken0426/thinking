@@ -28,5 +28,8 @@ public class ChannelTransfer {
 		toChannel.transferFrom(fromChannel, position, count);
 
 		fromChannel.transferTo(position, count, toChannel);
+		
+		fromFile.close();
+		toFile.close();
 	}
 }
