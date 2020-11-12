@@ -8,7 +8,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
- * 动态代理：权限限制
+   *  动态代理：权限限制
  * 
  * @author Administrator 2016-1-5 上午11:54:09
  */
@@ -21,10 +21,10 @@ public class ProxyMethodInterceptor implements MethodInterceptor {
 	}
 
 	/**
-	 *  Object为由CGLib动态生成的代理类实例，
-	 *  Method为上文中实体类所调用的被代理的方法引用， 
-	 *  Object[]为参数值列表，
-	 *  MethodProxy为生成的代理类对方法的代理引用。 
+	 * Object为由CGLib动态生成的代理类实例，
+	 * Method为上文中实体类所调用的被代理的方法引用， 
+	 * Object[]为参数值列表，
+	 * MethodProxy为生成的代理类对方法的代理引用。 
 	   *  返回：从代理实例的方法调用返回的值。
 	   *  其中，methodProxy.invokeSuper(obj,arg)： 调用代理类实例上的proxy方法的父类方法（即实体类Book中对应的方法）
 	 */

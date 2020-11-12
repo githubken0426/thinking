@@ -11,6 +11,7 @@ import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.NoOp;
 
 public class FilterMain {
+	
 	public static void main(String[] args) {
 		MethodInterceptor interceptor = new ProxyMethodInterceptor("boss");
 		FixedValue fixed = new ProxyFixedValue();

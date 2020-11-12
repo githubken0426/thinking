@@ -19,41 +19,45 @@ import net.sf.cglib.proxy.MethodProxy;
  */
 public class SignatureMakerMain {
 
-    /**
-     * @param name          方法名
-     * @param returnType    返回值类型
-     * @param argumentTypes 参数类型
-     * @param exceptions    异常类型
-     * @date 2017年7月10日 下午1:23:22
-     */
-    public static Class<?> getInstance(String name, Type returnType, Type[] argumentTypes, Type[] exceptions) {
-        Signature signature = new Signature(name, returnType, argumentTypes);
-        InterfaceMaker interfaceMaker = new InterfaceMaker();
-        interfaceMaker.add(signature, exceptions);
-        Class<?> iface = interfaceMaker.create();
-        return iface;
-    }
+	/**
+	 * @param name          方法名
+	 * @param returnType    返回值类型
+	 * @param argumentTypes 参数类型
+	 * @param exceptions    异常类型
+	 * @date 2017年7月10日 下午1:23:22
+	 */
+	public static Class<?> getInstance(String name, Type returnType, Type[] argumentTypes, Type[] exceptions) {
+		Signature signature = new Signature(name, returnType, argumentTypes);
+		InterfaceMaker interfaceMaker = new InterfaceMaker();
+		interfaceMaker.add(signature, exceptions);
+		Class<?> iface = interfaceMaker.create();
+		return iface;
+	}
 
-    public static void main(String[] args) throws SecurityException, NoSuchMethodException, IllegalArgumentException,
-            IllegalAccessException, InvocationTargetException {
-        Class<?> cla = getInstance("insert", Type.INT_TYPE, new Type[]{Type.INT_TYPE, Type.FLOAT_TYPE}, new Type[0]);
-        for (Method method : cla.getDeclaredMethods()) {
-            System.out.println("新创建的方法:" + method.getName());
-        }
+	public static void main(String[] args) throws SecurityException, NoSuchMethodException, IllegalArgumentException,
+			IllegalAccessException, InvocationTargetException {
+		Class<?> cla = getInstance("insert", Type.INT_TYPE, new Type[] { Type.INT_TYPE, Type.FLOAT_TYPE }, new Type[0]);
+		for (Method method : cla.getDeclaredMethods()) {
+			System.out.println("新创建的方法:" + method.getName());
+		}
 
-        Object object = Enhancer.create(Book.class, new Class[]{cla}, new MethodInterceptor() {
-            @Override
-            public Object intercept(Object obj, Method method, Object[] arg, MethodProxy proxy) throws Throwable {
-                if (method.getName().equals("insert")) {
-                    return arg[0];
-                }
-                return null;
-            }
-        });
-        //必须指定参数类型(顺序和数量)
-        Method targetMethod = object.getClass().getMethod("insert", new Class[]{int.class, Float.TYPE});
-        //必须指定参数(顺序、数量、类型要对应上)
-        Object result = targetMethod.invoke(object, new Object[]{100, 200.1f});
-        System.out.println("insert返回值:" + result);
-    }
+		Object object = Enhancer.create(Book.class, new Class[] { cla }, new MethodInterceptor() {
+			@Override
+			public Object intercept(Object obj, Method method, Object[] arg, MethodProxy proxy) throws Throwable {
+				if (method.getName().equals("insert")) {
+					return arg[0];
+				}
+				return null;
+			}
+		});
+		/**
+		 * 必须指定参数类型(顺序和数量)
+		 */
+		Method targetMethod = object.getClass().getMethod("insert", new Class[] { int.class, Float.TYPE });
+		/**
+		 * 必须指定参数(顺序、数量、类型要对应上)
+		 */
+		Object result = targetMethod.invoke(object, new Object[] { 100, 200.1f });
+		System.out.println("insert返回值:" + result);
+	}
 }
