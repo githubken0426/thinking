@@ -32,7 +32,8 @@ public class ListSerializable {
      *
      * @param args
      */
-    public static void main(String[] args) {
+    @SuppressWarnings("unchecked")
+	public static void main(String[] args) {
         String file = CommonConfiguration.DESKTOP_PATH + File.separator + "List.txt";
         List<String> list = new ArrayList<String>();
         list.add("Hello");

@@ -1,7 +1,5 @@
 package cn.thinking;
 
-
-
 import org.apache.commons.lang3.StringUtils;
 
 import java.nio.file.Path;
@@ -19,24 +17,26 @@ import java.util.Optional;
  */
 public class OptionalTest {
 	static {
-		Map<String,String> map=new HashMap<String,String>();
+		Map<String, String> map = new HashMap<String, String>();
 		map.put("a", "b");
 		System.out.println(map);
 	}
-	
+
 	static {
-		Map<String,String> map=new HashMap<String,String>();
+		Map<String, String> map = new HashMap<String, String>();
 		map.put("a", "c");
 		System.out.println(map);
 	}
-    public static void main(String[] args) {
-        List<String> lists = Arrays.asList("c", "d", "f");
-        lists = null;
-        String base64Str = StringUtils.EMPTY;
-        Path path = Paths.get("");
-        Optional<Path> files=Optional.ofNullable(Paths.get(""));
 
-        System.out.println(files.isPresent());
-    }
+	@SuppressWarnings("unused")
+	public static void main(String[] args) {
+		List<String> lists = Arrays.asList("c", "d", "f");
+		lists = null;
+		String base64Str = StringUtils.EMPTY;
+		Path path = Paths.get("");
+		Optional<Path> files = Optional.ofNullable(Paths.get(""));
+
+		System.out.println(files.isPresent());
+	}
 
 }
