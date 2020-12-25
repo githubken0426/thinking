@@ -3,6 +3,9 @@ package cn.thinking.lambda.functional;
 import java.util.Arrays;
 
 /**
+ * 	必须注解在接口上
+ * 	被注解的接口有且只有一个抽象方法
+ * 	被注解的接口可以有默认方法/静态方法，或者重写Object的方法
  * @Auther: ken.wangTJ
  * @Date: 7/9/2019 14:04
  * @Description:
@@ -23,5 +26,5 @@ public interface J8SampleService {
         ).forEach(System.out::println);
     }
 
-    void methodB();
+    void methodB(String param);
 }

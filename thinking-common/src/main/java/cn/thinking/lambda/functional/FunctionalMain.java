@@ -6,15 +6,16 @@ package cn.thinking.lambda.functional;
  * @Description:
  */
 public class FunctionalMain {
-    public static void main(String[] args) {
-        J8SampleService j8Sample = new J8SampleServiceImpl();
-        j8Sample.defaultMethod();
-        J8SampleService.staticMethod();
-        j8Sample.methodB();
+	public static void main(String[] args) {
+		J8SampleService j8Sample = new J8SampleServiceImpl();
+		j8Sample.defaultMethod();
+		J8SampleService.staticMethod();
+		j8Sample.methodB("Test unit one!");
 
-        System.out.println();
-        J8SampleService j8Sample2 = System.out::println;
-        //print null,invoke functional,not J8SampleServiceImpl
-        j8Sample2.methodB();
-    }
+		System.out.println("**************************");
+		J8SampleService j8Sample2 = System.out::println;
+		// print null,invoke functional,not J8SampleServiceImpl
+		j8Sample2.methodB("Test unit Two!");
+		System.out.println("**************************");
+	}
 }

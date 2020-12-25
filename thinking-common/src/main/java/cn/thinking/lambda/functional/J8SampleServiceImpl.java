@@ -9,10 +9,11 @@ import java.util.Arrays;
  */
 public class J8SampleServiceImpl implements J8SampleService {
 
-    @Override
-    public void methodB() {
-        Arrays.stream(J8SampleService.class.getDeclaredMethods()).filter(
-                method -> method.getName().equals("methodB")
-        ).forEach(System.out::println);
-    }
+	@Override
+	public void methodB(String param) {
+		System.out.println("param:" + param);
+		Arrays.stream(J8SampleService.class.getDeclaredMethods())
+			.filter(method -> method.getName().equals("methodB"))
+			.forEach(System.out::println);
+	}
 }
