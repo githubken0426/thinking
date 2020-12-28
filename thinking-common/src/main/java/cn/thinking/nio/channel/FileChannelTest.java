@@ -4,7 +4,12 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
-
+/**
+ * FileChannel是一个连接到文件的通道。可以通过文件通道读写文件。
+ * FileChannel无法设置为非阻塞模式，他总是运行在阻塞模式下。
+ * @author kun.f.wang
+ *
+ */
 public class FileChannelTest {
 	static final String path = "C:\\ec_workspace\\thinking\\thinking-common\\src\\main\\java\\cn\\thinking\\nio\\channel\\FileChannelTest.java";
 	/**

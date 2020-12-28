@@ -12,53 +12,57 @@ import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-public class SocketChannelTest {
-
+/**
+ * ServerSocketChannel： 监听新进来的TCP连接，像Web服务器那样。对每一个新进来的连接都会创建一个SocketChannel。
+ * read，write 前必须建立连接，线程安全，任意时刻只能有一个线程进行读取和写入。
+ * 
+ * TCP（Transmission Control Protocol，传输控制协议）是面向连接的协议，也就是说，在收发数据前，必须和对方建立可靠的连接。
+ * 一个TCP连接必须要经过三次“对话”才能建立起来，而断开连接要进行4次。
+ * @author kun.f.wang
+ */
+public class ServerSocketChannelTest {
+	static final int port = 8081;
 	public static void main(String[] args) throws IOException, InterruptedException {
-
 		new Thread(new Runnable() {
 			@Override
 			public void run() {
 				try {
-					serverSocketWithSelector();
-//					serverSocketChannel();
+					serverSocketChannel(Selector.open());
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
 			}
 		}).start();
+		
 		TimeUnit.SECONDS.sleep(5);
 		new Thread(new Runnable() {
 			@Override
 			public void run() {
-				try {
-					clientSocketChannel();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
+				clientSocketChannel();
 			}
 		}).start();
 	}
 
-	static final int port = 8081;
-
 	/**
-	 * 虽然我们可以自己处理每一个Socket事件，比如读写数据，不过更常规的方式是注册一个选择器。这个选择器侦听着数据的变化事件。
-	 * 每个注册的通道都有自己的SelectionKey,用这个可以区分到底是哪个通道产生了事件
+	 * 虽然我们可以自己处理每一个Socket事件，比如读写数据，不过更常规的方式是注册一个选择器。
+	 * 这个选择器侦听着数据的变化事件。每个注册的通道都有自己的SelectionKey,用这个可以区分到底是哪个通道产生了事件。
 	 * 
+	 * ServerSocketChannel并不能进行数据传输的能力。
+	 * 1、监听新进来的TCP链接通道
+	 * 2、创建新的SocketChannel
 	 * @throws IOException
 	 */
-	public static void serverSocketWithSelector() throws IOException {
+	public static void serverSocketChannel(Selector selector)  {
 		try (ServerSocketChannel channel = ServerSocketChannel.open()) {
 			channel.configureBlocking(false);
 			channel.bind(new InetSocketAddress(port));
-
-			Selector selector = Selector.open();
+//			Selector selector = Selector.open();
 			channel.register(selector, SelectionKey.OP_ACCEPT);
 			System.out.println("serverSocketWithSelector 准备就绪！");
 			for (;;) {
 				int selectorCount = selector.select();
 				if (selectorCount < 1)
+					//表示没有数据发送过来。非阻塞模式下,可以趁着还没数据发送过来的时候做一些其他操作，以此提高效率
 					continue;
 				Set<SelectionKey> selectionKeys = selector.selectedKeys();
 
@@ -79,6 +83,8 @@ public class SocketChannelTest {
 					keyIterator.remove();
 				}
 			}
+		}catch (IOException e) {
+			e.printStackTrace();
 		}
 	}
 
@@ -114,42 +120,41 @@ public class SocketChannelTest {
 		socketChannel.close();
 	}
 
-	/**
-	 * ServerSocketChannel 1、监听新进来的TCP链接通道， 2、创建新的SocketChannel
-	 * ServerSocketChannel并不能进行数据传输的能力
-	 * 
-	 * @throws IOException
-	 */
 	public static void serverSocketChannel() throws IOException {
-		ServerSocketChannel channel = ServerSocketChannel.open();
-		// 1设置为非阻塞模式
-		channel.configureBlocking(false);
-		channel.bind(new InetSocketAddress(port));
-		ByteBuffer buffer = ByteBuffer.allocate(1024);
-		System.out.println("服务器准备接收数据");
-		for (;;) {
-			/**
-			 * 在服务器端，接收客户端的链接，如果存在客户端的话，就返回一个SocketChannel对象.
-			 * 如果是阻塞模式的话，没有新的链接进来，就会阻塞在这里，否则，往下执行 ;
-			 * 如果是非阻塞模式的话，没有新的链接进来，就会立马返回一个null，程序不会阻塞在这里， 会立马往下进行的;
-			 */
-			SocketChannel socketChannel = channel.accept();
-			if (null != socketChannel) {
-				int bytesRead = socketChannel.read(buffer);
-				while (bytesRead != -1) {
-					// make buffer ready for read
-					buffer.flip();
-					while (buffer.hasRemaining()) {
-						System.out.print((char) buffer.get()); // read 1 byte at a time
+		try (ServerSocketChannel channel = ServerSocketChannel.open()) {
+			// 1设置为非阻塞模式
+			channel.configureBlocking(false);
+			channel.bind(new InetSocketAddress(port));
+			ByteBuffer buffer = ByteBuffer.allocate(1024);
+			System.out.println("服务器准备接收数据");
+			for (;;) {
+				/**
+				 * ServerSocketChannel的阻塞与非阻塞主要体现在accept方法上。
+				 * 
+				 * 阻塞模式： 没有接收到客户端请求，就会一直阻塞，直到accept方法获取到SocketChannel对象为止;
+				 * 非阻塞模式： 调用accept方法如果返回null，则表示没有收到请求，此时可以做其他的事，之后再继续调用accept看看有没有请求到来，如此循环；
+				 * 			如果accept返回了SocketChannel实例，那么此时就与客户端请求建立了连接，通过该SocketChannel实例可以发送与接收数据了。
+				 */
+				SocketChannel socketChannel = channel.accept();
+				if (null != socketChannel) {
+					int bytesRead = socketChannel.read(buffer);
+					while (bytesRead != -1) {
+						// make buffer ready for read
+						buffer.flip();
+						while (buffer.hasRemaining()) {
+							System.out.print((char) buffer.get()); // read 1 byte at a time
+						}
+						buffer.clear(); // make buffer ready for writing
+						bytesRead = socketChannel.read(buffer);
 					}
-					buffer.clear(); // make buffer ready for writing
-					bytesRead = socketChannel.read(buffer);
 				}
 			}
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 	}
 
-	public static void clientSocketChannel() throws IOException {
+	public static void clientSocketChannel() {
 		try (SocketChannel channel = SocketChannel.open()) {
 			channel.connect(new InetSocketAddress("localhost", port));
 			ByteBuffer buffer = ByteBuffer.allocate(1024);
@@ -158,6 +163,8 @@ public class SocketChannelTest {
 			while (buffer.hasRemaining()) {
 				channel.write(buffer);
 			}
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 	}
 }
