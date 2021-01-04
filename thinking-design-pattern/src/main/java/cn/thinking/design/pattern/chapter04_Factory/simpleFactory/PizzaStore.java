@@ -1,6 +1,6 @@
-package cn.thinking.design.pattern.chapter04_Factory.anExample;
+package cn.thinking.design.pattern.chapter04_Factory.simpleFactory;
 
-import cn.thinking.design.pattern.chapter04_Factory.factoryMethod.Pizza;
+import cn.thinking.design.pattern.chapter04_Factory.factoryMethod.pizza.Pizza;
 
 /**
  * PizzaStore为一个超类型

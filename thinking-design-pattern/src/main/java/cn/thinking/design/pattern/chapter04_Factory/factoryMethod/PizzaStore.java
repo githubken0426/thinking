@@ -1,4 +1,7 @@
 package cn.thinking.design.pattern.chapter04_Factory.factoryMethod;
+
+import cn.thinking.design.pattern.chapter04_Factory.factoryMethod.pizza.Pizza;
+
 /**
  * PizzaStore为一个超类型
  * 让子类来实现具体的Pizza制作方法
@@ -20,8 +23,8 @@ public abstract class PizzaStore {
 	 * @param type
 	 * @date 2018年9月13日 下午3:56:16
 	 */
-	public final Pizza orderPizza(String type){
-		Pizza pizza=createPizza(type);
+	public final Pizza orderPizza(String type) {
+		Pizza pizza = createPizza(type);
 		pizza.prepare();
 		pizza.bake();
 		pizza.cut();

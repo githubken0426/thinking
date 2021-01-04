@@ -1,4 +1,4 @@
-package cn.thinking.design.pattern.chapter04_Factory.abstractFactory.ingredent;
+package cn.thinking.design.pattern.chapter04_Factory.abstractFactory.ingredient;
 /**
  * 酱汁
  * @author ken

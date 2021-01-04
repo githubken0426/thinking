@@ -1,6 +1,6 @@
 package cn.thinking.design.pattern.chapter04_Factory.abstractFactory.pizza;
 
-import cn.thinking.design.pattern.chapter04_Factory.abstractFactory.ingredentFactory.PizzaIngredientFactory;
+import cn.thinking.design.pattern.chapter04_Factory.abstractFactory.ingredientFactory.PizzaIngredientFactory;
 
 /**
  * 素食披萨
@@ -11,16 +11,17 @@ import cn.thinking.design.pattern.chapter04_Factory.abstractFactory.ingredentFac
 public class VeggiePizza extends Pizza {
 
 	private PizzaIngredientFactory factory;
-	public VeggiePizza(PizzaIngredientFactory factory){
-		this.factory=factory;
+
+	public VeggiePizza(PizzaIngredientFactory factory) {
+		this.factory = factory;
 	}
-	
+
 	@Override
 	public void prepare() {
-		System.out.println("preparing "+name);
-		dough=factory.createDough();
-		cheese=factory.createCheese();
-		sauce=factory.createSauce();
+		System.out.println("preparing " + name);
+		dough = factory.createDough();
+		cheese = factory.createCheese();
+		sauce = factory.createSauce();
 	}
 
 }

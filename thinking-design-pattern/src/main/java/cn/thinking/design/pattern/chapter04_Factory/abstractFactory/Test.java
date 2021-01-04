@@ -13,10 +13,10 @@ import cn.thinking.design.pattern.chapter04_Factory.abstractFactory.store.PizzaS
  */
 public class Test {
 	public static void main(String[] args) {
-		PizzaStore store=new NYPizzaStore();
+		PizzaStore store = new NYPizzaStore();
 		store.orderPizza("cheese");
-		
-		store=new ChicagoPizzaStore();
+
+		store = new ChicagoPizzaStore();
 		store.orderPizza("veggie");
 	}
 }

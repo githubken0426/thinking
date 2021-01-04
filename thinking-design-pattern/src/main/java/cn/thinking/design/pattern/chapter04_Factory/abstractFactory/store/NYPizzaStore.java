@@ -1,7 +1,7 @@
 package cn.thinking.design.pattern.chapter04_Factory.abstractFactory.store;
 
-import cn.thinking.design.pattern.chapter04_Factory.abstractFactory.ingredentFactory.NYPizzaIngredientFactory;
-import cn.thinking.design.pattern.chapter04_Factory.abstractFactory.ingredentFactory.PizzaIngredientFactory;
+import cn.thinking.design.pattern.chapter04_Factory.abstractFactory.ingredientFactory.NewYorkPizzaIngredientFactory;
+import cn.thinking.design.pattern.chapter04_Factory.abstractFactory.ingredientFactory.PizzaIngredientFactory;
 import cn.thinking.design.pattern.chapter04_Factory.abstractFactory.pizza.CheesePizza;
 import cn.thinking.design.pattern.chapter04_Factory.abstractFactory.pizza.Pizza;
 import cn.thinking.design.pattern.chapter04_Factory.abstractFactory.pizza.VeggiePizza;
@@ -17,7 +17,7 @@ public class NYPizzaStore extends PizzaStore{
 	@Override
 	public Pizza createPizza(String type) {
 		Pizza pizza=null;
-		PizzaIngredientFactory factory=new NYPizzaIngredientFactory();
+		PizzaIngredientFactory factory=new NewYorkPizzaIngredientFactory();
 		if(type.equals("cheese")){
 			pizza= new CheesePizza(factory);
 			pizza.setName("纽约cheese披萨！");

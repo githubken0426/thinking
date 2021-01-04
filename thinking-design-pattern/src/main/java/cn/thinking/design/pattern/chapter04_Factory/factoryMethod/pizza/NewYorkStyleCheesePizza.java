@@ -1,6 +1,6 @@
-package cn.thinking.design.pattern.chapter04_Factory.factoryMethod;
+package cn.thinking.design.pattern.chapter04_Factory.factoryMethod.pizza;
 
-public class NYStyleCheesePizza implements Pizza {
+public class NewYorkStyleCheesePizza implements Pizza {
 
 	@Override
 	public void prepare() {

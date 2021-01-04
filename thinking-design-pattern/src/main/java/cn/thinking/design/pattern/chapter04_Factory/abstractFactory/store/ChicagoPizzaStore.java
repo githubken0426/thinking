@@ -1,7 +1,7 @@
 package cn.thinking.design.pattern.chapter04_Factory.abstractFactory.store;
 
-import cn.thinking.design.pattern.chapter04_Factory.abstractFactory.ingredentFactory.ChicagoPizzaIngredientFactory;
-import cn.thinking.design.pattern.chapter04_Factory.abstractFactory.ingredentFactory.PizzaIngredientFactory;
+import cn.thinking.design.pattern.chapter04_Factory.abstractFactory.ingredientFactory.ChicagoPizzaIngredientFactory;
+import cn.thinking.design.pattern.chapter04_Factory.abstractFactory.ingredientFactory.PizzaIngredientFactory;
 import cn.thinking.design.pattern.chapter04_Factory.abstractFactory.pizza.CheesePizza;
 import cn.thinking.design.pattern.chapter04_Factory.abstractFactory.pizza.Pizza;
 import cn.thinking.design.pattern.chapter04_Factory.abstractFactory.pizza.VeggiePizza;

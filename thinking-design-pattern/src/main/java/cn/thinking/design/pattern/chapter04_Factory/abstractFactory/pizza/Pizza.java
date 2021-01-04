@@ -1,8 +1,8 @@
 package cn.thinking.design.pattern.chapter04_Factory.abstractFactory.pizza;
 
-import cn.thinking.design.pattern.chapter04_Factory.abstractFactory.ingredent.Cheese;
-import cn.thinking.design.pattern.chapter04_Factory.abstractFactory.ingredent.Dough;
-import cn.thinking.design.pattern.chapter04_Factory.abstractFactory.ingredent.Sauce;
+import cn.thinking.design.pattern.chapter04_Factory.abstractFactory.ingredient.Cheese;
+import cn.thinking.design.pattern.chapter04_Factory.abstractFactory.ingredient.Dough;
+import cn.thinking.design.pattern.chapter04_Factory.abstractFactory.ingredient.Sauce;
 
 public abstract class Pizza {
 	public abstract void prepare();
