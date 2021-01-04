@@ -1,10 +1,9 @@
 package cn.thinking.design.pattern.chapter04_Factory.factoryMethod.pizza;
 
-public class NewYorkStyleCheesePizza implements Pizza {
-
+public class ChicagoCheesePizza implements Pizza {
 	@Override
 	public void prepare() {
-		System.out.println("New York CheesePizza prepare");
+		System.out.println("Chicago CheesePizza prepare");
 	}
 
 	@Override

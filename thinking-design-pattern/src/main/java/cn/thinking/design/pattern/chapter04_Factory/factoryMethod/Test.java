@@ -1,5 +1,9 @@
 package cn.thinking.design.pattern.chapter04_Factory.factoryMethod;
 
+import cn.thinking.design.pattern.chapter04_Factory.factoryMethod.storeFactory.ChicagoPizzaStoreFactory;
+import cn.thinking.design.pattern.chapter04_Factory.factoryMethod.storeFactory.NewYorkPizzaStoreFactory;
+import cn.thinking.design.pattern.chapter04_Factory.factoryMethod.storeFactory.PizzaStoreFactory;
+
 /**
  * 工厂方法模式
  * @author ken
@@ -9,10 +13,10 @@ package cn.thinking.design.pattern.chapter04_Factory.factoryMethod;
  */
 public class Test {
 	public static void main(String[] args) {
-		PizzaStore nyStyle=new NYStylePizzaStore();
+		PizzaStoreFactory nyStyle=new NewYorkPizzaStoreFactory();
 		nyStyle.orderPizza("cheese");
 		
-		PizzaStore chicago=new ChicagoStylePizzaStore();
+		PizzaStoreFactory chicago=new ChicagoPizzaStoreFactory();
 		chicago.orderPizza("cheese");
 	}
 	

@@ -4,7 +4,7 @@ import cn.thinking.design.pattern.chapter04_Factory.abstractFactory.pizza.Pizza;
 
 public abstract class PizzaStoreFactory {
 	/**
-	 * 提供一个抽象借口来创建产品
+	 * 提供一个抽象接口来创建产品
 	 * 
 	 * @param type
 	 * @return
@@ -12,7 +12,7 @@ public abstract class PizzaStoreFactory {
 	 */
 	public abstract Pizza createPizza(String type);
 	/**
-	 * PizzaStore实现为工厂方法。
+	 * PizzaStoreFactory实现为工厂方法。
 	 */
 	public final Pizza orderPizza(String type) {
 		Pizza pizza = createPizza(type);

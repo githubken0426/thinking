@@ -1,15 +1,15 @@
-package cn.thinking.design.pattern.chapter04_Factory.factoryMethod;
+package cn.thinking.design.pattern.chapter04_Factory.factoryMethod.storeFactory;
 
 import cn.thinking.design.pattern.chapter04_Factory.factoryMethod.pizza.Pizza;
 
 /**
- * PizzaStore为一个超类型
+ * PizzaStoreFactory为一个超类型
  * 让子类来实现具体的Pizza制作方法
  * @author ken
  * 
  * @date 2017年6月27日 下午3:48:22
  */
-public abstract class PizzaStore {
+public abstract class PizzaStoreFactory {
 	/**
 	 * 工厂方法，用来创建产品
 	 * @param type
