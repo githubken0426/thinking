@@ -1,8 +1,8 @@
 package cn.thinking.design.pattern.chapter04_Factory.abstractFactory;
 
-import cn.thinking.design.pattern.chapter04_Factory.abstractFactory.store.ChicagoPizzaStore;
-import cn.thinking.design.pattern.chapter04_Factory.abstractFactory.store.NYPizzaStore;
-import cn.thinking.design.pattern.chapter04_Factory.abstractFactory.store.PizzaStore;
+import cn.thinking.design.pattern.chapter04_Factory.abstractFactory.storeFactory.ChicagoPizzaStoreFactory;
+import cn.thinking.design.pattern.chapter04_Factory.abstractFactory.storeFactory.NewYorkPizzaStoreFactory;
+import cn.thinking.design.pattern.chapter04_Factory.abstractFactory.storeFactory.PizzaStoreFactory;
 
 /**
  * 工厂方法使用的是类(继承)
@@ -13,10 +13,11 @@ import cn.thinking.design.pattern.chapter04_Factory.abstractFactory.store.PizzaS
  */
 public class Test {
 	public static void main(String[] args) {
-		PizzaStore store = new NYPizzaStore();
+		PizzaStoreFactory store = new NewYorkPizzaStoreFactory();
 		store.orderPizza("cheese");
-
-		store = new ChicagoPizzaStore();
+		store.orderPizza("veggie");
+		
+		store = new ChicagoPizzaStoreFactory();
 		store.orderPizza("veggie");
 	}
 }

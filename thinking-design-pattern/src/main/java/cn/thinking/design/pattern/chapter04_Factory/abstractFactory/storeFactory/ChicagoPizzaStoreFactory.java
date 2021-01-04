@@ -1,4 +1,4 @@
-package cn.thinking.design.pattern.chapter04_Factory.abstractFactory.store;
+package cn.thinking.design.pattern.chapter04_Factory.abstractFactory.storeFactory;
 
 import cn.thinking.design.pattern.chapter04_Factory.abstractFactory.ingredientFactory.ChicagoPizzaIngredientFactory;
 import cn.thinking.design.pattern.chapter04_Factory.abstractFactory.ingredientFactory.PizzaIngredientFactory;
@@ -12,18 +12,18 @@ import cn.thinking.design.pattern.chapter04_Factory.abstractFactory.pizza.Veggie
  * 
  * @date 2017年7月10日 下午3:28:30
  */
-public class ChicagoPizzaStore extends PizzaStore{
+public class ChicagoPizzaStoreFactory extends PizzaStoreFactory{
 
 	
 	@Override
 	public Pizza createPizza(String type) {
-		Pizza pizza=null;
-		PizzaIngredientFactory factory=new ChicagoPizzaIngredientFactory();
-		if(type.equals("cheese")){
-			pizza= new CheesePizza(factory);
+		Pizza pizza = null;
+		PizzaIngredientFactory factory = new ChicagoPizzaIngredientFactory();
+		if (type.equals("cheese")) {
+			pizza = new CheesePizza(factory);
 			pizza.setName("芝加哥cheese披萨！");
-		}else if(type.equals("veggie")){
-			pizza= new VeggiePizza(factory);
+		} else if (type.equals("veggie")) {
+			pizza = new VeggiePizza(factory);
 			pizza.setName("芝加哥veggie披萨！");
 		}
 		return pizza;

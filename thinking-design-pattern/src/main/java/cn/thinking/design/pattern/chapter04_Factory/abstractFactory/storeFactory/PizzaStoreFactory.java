@@ -1,8 +1,8 @@
-package cn.thinking.design.pattern.chapter04_Factory.abstractFactory.store;
+package cn.thinking.design.pattern.chapter04_Factory.abstractFactory.storeFactory;
 
 import cn.thinking.design.pattern.chapter04_Factory.abstractFactory.pizza.Pizza;
 
-public abstract class PizzaStore {
+public abstract class PizzaStoreFactory {
 	/**
 	 * 提供一个抽象借口来创建产品
 	 * 
@@ -14,8 +14,8 @@ public abstract class PizzaStore {
 	/**
 	 * PizzaStore实现为工厂方法。
 	 */
-	public final Pizza orderPizza(String type){
-		Pizza pizza=createPizza(type);
+	public final Pizza orderPizza(String type) {
+		Pizza pizza = createPizza(type);
 		pizza.prepare();
 		pizza.bake();
 		pizza.cut();
