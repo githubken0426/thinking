@@ -7,3 +7,19 @@ properties:
   switch: true
   say-what: hello
   to-who: ultro
+  
+jwt:
+  expirationTime: 1 #60分钟有效期
+  clients:
+    - issuer: sina
+      issuerId: sinaId
+      keyAlias: key_alias
+      storePass: mykeypass154b11906e6f141a7d5d3d6d7b368306
+      keyPass: mykeypass154b11906e6f141a7d5d3d6d7b368306
+      keyStoreFilePath: keystore.jks
+    - issuer: baidu
+      issuerId: baiduId
+      keyAlias: key_alias
+      storePass: mykeypass154b11906e6f141a7d5d3d6d7b368306
+      keyPass: mykeypass154b11906e6f141a7d5d3d6d7b368306
+      keyStoreFilePath: keystore.jks

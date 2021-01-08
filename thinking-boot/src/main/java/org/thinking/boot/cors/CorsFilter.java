@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
@@ -27,6 +28,16 @@ public class CorsFilter implements Filter {
 		res.setHeader("Access-Control-Allow-Headers", CorsConst.ALLOWED_HEADS_VALUES);
 		chain.doFilter(request, res);
 
+	}
+
+	@Override
+	public void destroy() {
+		
+	}
+
+	@Override
+	public void init(FilterConfig arg0) throws ServletException {
+		
 	}
 
 }

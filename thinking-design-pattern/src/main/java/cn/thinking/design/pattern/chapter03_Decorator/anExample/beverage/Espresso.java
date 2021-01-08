@@ -1,6 +1,6 @@
 package cn.thinking.design.pattern.chapter03_Decorator.anExample.beverage;
 /**
- * 具体组件
+ * Espresso组件
  * @author ken
  * 
  * @date 2017年7月12日 下午2:48:05

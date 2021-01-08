@@ -1,7 +1,7 @@
 package cn.thinking.design.pattern.chapter03_Decorator.anExample.beverage;
 
 /**
- * 具体组件
+ * HouseBlend组件
  * 
  * @author ken 2017-6-15 下午02:56:24
  */
