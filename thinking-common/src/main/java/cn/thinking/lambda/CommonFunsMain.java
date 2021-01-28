@@ -2,26 +2,31 @@ package cn.thinking.lambda;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
+import java.util.stream.Stream;
 
 /**
- * 常用的函数式接口主要有四种类型，是通过其输入和输出的参数来进行区分的 接口名 说明 Function<T,R> 接收一个T类型的参数，返回一个R类型的结果
- * Consumer<T> 接收一个T类型的参数，不返回值 Predicate<T> 接收一个T类型的参数，返回一个boolean类型的结果
- * Supplier<T> 不接受参数，返回一个T类型的结果
+ * 常用的函数式接口主要有四种类型，是通过其输入和输出的参数来进行区分的.
+ * 		接口名 				说明 
+ * Function<T,R> 	接收一个T类型的参数，返回一个R类型的结果
+ * Consumer<T> 		接收一个T类型的参数，不返回值 
+ * Predicate<T> 	接收一个T类型的参数，返回一个boolean类型的结果
+ * Supplier<T> 		不接受参数，返回一个T类型的结果
  * 
  * @author kun.f.wang
  */
 public class CommonFunsMain {
 
 	public static void main(String[] args) {
-//		functionCreate();
+		functionCreate();
 
-		functionMethod();
+//		functionMethod();
 	}
 
 	static void functionCreate() {
@@ -34,7 +39,12 @@ public class CommonFunsMain {
 
 		Supplier<String> supplier = () -> new String("不接受参数，返回一个T类型的结果");
 		System.out.println(supplier.get());
+		
+		System.out.println("*******************");
+		Supplier<Integer> supplierI = new Random(10)::nextInt;
+		Stream.generate(supplierI).map(value -> value + 1).limit(5).forEach(System.out::println);
 
+		System.out.println("*******************");
 		List<String> list = Arrays.asList("zhangsan", "lisi", "wangwu", "xiaoming", "zhaoliu");
 		list.stream().map(value -> value + "_B") // 传入的是一个Function函数式接口
 				.filter(value -> value.length() > 2) //	传入的是一个Predicate函数式接口

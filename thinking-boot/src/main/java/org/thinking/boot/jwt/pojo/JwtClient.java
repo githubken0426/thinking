@@ -1,6 +1,19 @@
 package org.thinking.boot.jwt.pojo;
 
+import java.io.IOException;
+
+import org.codehaus.jackson.JsonGenerationException;
+import org.codehaus.jackson.map.JsonMappingException;
+import org.codehaus.jackson.map.ObjectMapper;
+
 public class JwtClient {
+	public static void main(String[] args) throws JsonGenerationException, JsonMappingException, IOException {
+		Subject subject = new Subject("a", "b");
+		ObjectMapper mapper = new ObjectMapper();
+		String key = mapper.writeValueAsString(subject);
+		System.out.println(key);
+	}
+
 	private String issuer;
 	private String issuerId;
 	private String keyAlias;

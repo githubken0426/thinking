@@ -49,7 +49,7 @@ public class FileChannelTest {
 				// make buffer ready for read
 				buffer.flip();
 				while (buffer.hasRemaining()) {
-					//设置编码
+					//	设置编码
 					CharBuffer charBuffer = Charset.forName("UTF-8").decode(buffer);
 					System.out.println(charBuffer.toString());
 				}
