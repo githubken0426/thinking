@@ -31,7 +31,7 @@ public class PersonComparable implements Comparable<PersonComparable> {
 		this.age = age;
 		this.name = name;
 	}
-
+	
 	/**
 	 * 比较当前实例对象与对象obj
 	 * 如果位于对象obj之前，返回负值， 
@@ -40,13 +40,15 @@ public class PersonComparable implements Comparable<PersonComparable> {
 	 */
 	@Override
 	public int compareTo(PersonComparable obj) {
-		// int temp = age - obj.getAge();
-		// return temp == 0 ? ten : temp;
-		System.out.println("name:" + name + ",obj.getName:" + obj.getName());
-		// 此处是调用String类的compareTo方法
-		int ten = name.compareTo(obj.getName());
-		System.out.println(ten);
-		return ten;
+		System.out.println("name:" + name + ", age:" + age);
+		System.out.println("obj.getName:" + obj.getName() + ",obj.getAge:" + obj.getAge());
+		int temp = (age < obj.getAge()) ? -1 : ((age == obj.getAge()) ? 0 : 1);
+		System.out.println(temp);
+		return temp;
+//		// 	此处是调用String类的compareTo方法
+//		int ten = name.compareTo(obj.getName());
+//		System.out.println(ten);
+//		return ten;
 	}
 
 	public String toString() {
@@ -59,9 +61,14 @@ public class PersonComparable implements Comparable<PersonComparable> {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		PersonComparable[] person = { new PersonComparable(20, "Tom"), new PersonComparable(20, "Jeff"),
-				new PersonComparable(30, "Mary"), new PersonComparable(20, "Ada"), new PersonComparable(40, "Walton"),
-				new PersonComparable(61, "Peter"), new PersonComparable(20, "Bush") };
+		PersonComparable[] person = { 
+				new PersonComparable(20, "Tom"), 
+				new PersonComparable(20, "Jeff"),
+				new PersonComparable(30, "Mary"), 
+				new PersonComparable(20, "Ada"), 
+				new PersonComparable(40, "Walton"),
+				new PersonComparable(61, "Peter"), 
+				new PersonComparable(20, "Bush") };
 		System.out.println("排序前：" + Arrays.toString(person));
 		Arrays.sort(person);
 		// Collections.sort(list);

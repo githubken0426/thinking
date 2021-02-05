@@ -1,6 +1,7 @@
 package cn.thinking.lambda;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
 import java.util.function.BiConsumer;
@@ -126,5 +127,19 @@ public class CommonFunsMain {
 		
 		Supplier<String> supplier = () -> new String("不接受参数，返回一个T类型的结果");
 		System.out.println(supplier.get());
+	}
+	
+	public void compare() {
+		Integer result = Arrays.asList(100, 20, 101, 9, 3, 11, 41, 44, 42, 21, 207, 22)
+				.stream()
+				.distinct()
+				.filter(x -> {
+					return x % 2 == 0;
+				})
+				.sorted(Comparator.comparingInt(x -> x))
+				.map(x -> x * 2)
+				.findFirst()
+				.get();
+		System.out.println(result);
 	}
 }

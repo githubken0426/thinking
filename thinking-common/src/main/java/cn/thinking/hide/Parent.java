@@ -1,8 +1,8 @@
 package cn.thinking.hide;
 
 public class Parent {
-	public static int a = 100;
-	public int b = 101;
+	public static String a = "Parent var a";
+	public String b = "Parent var b";
 
 	public static void methodA() {
 		System.out.println("Parent methodA");
@@ -18,9 +18,5 @@ public class Parent {
 
 	public void methodD(Child c) {
 		System.out.println("Parent methodD:" + c);
-	}
-	
-	public void methodE() {
-		System.out.println("Parent methodE!");
 	}
 }
