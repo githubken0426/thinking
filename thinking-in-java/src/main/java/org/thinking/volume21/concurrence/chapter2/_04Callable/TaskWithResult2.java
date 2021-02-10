@@ -9,6 +9,8 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.FutureTask;
 import java.util.concurrent.TimeUnit;
 
+import org.thinking.volume21.concurrence.DateTimeUtil;
+
 /**
  * 使用FutureTask
  * 
@@ -26,8 +28,8 @@ public class TaskWithResult2<V> implements Callable<V> {
 	@Override
 	public V call() throws Exception {
 		for (int i = 1; i <= 3; i++) {
-			System.out.println("task sleep "+i + "��");
-			TimeUnit.SECONDS.sleep(1);
+			System.out.println("task sleep " + i +" second");
+			TimeUnit.SECONDS.sleep(i);
 		}
 		return (V) (Thread.currentThread() + ":" + id);
 	}
@@ -44,20 +46,19 @@ public class TaskWithResult2<V> implements Callable<V> {
 		try {
 //			public class FutureTask implements RunnableFuture 
 //			public interface RunnableFuture extends Runnable,Future
-			
-			FutureTask<String> future = new FutureTask<String>(
-					new TaskWithResult2<String>("����ֵ"));
+
+			FutureTask<String> future = new FutureTask<String>(new TaskWithResult2<String>("actual valueֵ"));
 			exe.submit(future);
 //			TimeUnit.SECONDS.sleep(4);
-			System.out.println("future.isDone()="+future.isDone());
-			if(future.isDone())
-				System.out.println("future.get():"+future.get());
+			System.out.println("future.isDone()= " + future.isDone());
+			if (future.isDone())
+				System.out.println("future.get(): " + future.get());
 			System.out.println("method futureTask()");
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		} catch (ExecutionException e) {
 			e.printStackTrace();
-		}finally{
+		} finally {
 			exe.shutdown();
 		}
 	}
@@ -71,13 +72,14 @@ public class TaskWithResult2<V> implements Callable<V> {
 	 * 2017-3-21 下午03:35:41
 	 */
 	static void completionService(ExecutorService exe){
+		System.out.println("start:" + DateTimeUtil.getDateTime(System.currentTimeMillis()));
 		try {
 			CompletionService<String> cs = new ExecutorCompletionService<String>(exe);
-			cs.submit(new TaskWithResult2<String>("我是值"));
+			cs.submit(new TaskWithResult2<String>("value"));
 //			System.out.println(cs.take().isDone());
 			
-			System.out.println("future.get():"+cs.take().get());
-			System.out.println("method futureTask()");
+			System.out.println("future.get():" + cs.take().get());
+			System.out.println("end:" + DateTimeUtil.getDateTime(System.currentTimeMillis()));
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		} catch (ExecutionException e) {

@@ -7,19 +7,19 @@ import org.thinking.volume21.concurrence.chapter3._01WrongVisit.EvenChecker;
 import org.thinking.volume21.concurrence.chapter3._01WrongVisit.IntGenerator;
 
 /**
- * ������ʽ������� Lock
+ * 运用显式互斥机制 Lock
  * 
  * @author Administrator
  *
  */
 public class MutexEvenGenerator extends IntGenerator {
 	private int currentEvenValue = 0;
-	// ��ƽ��
+	// 公平锁
 	private Lock lock = new ReentrantLock(true);
 
 	/**
-	 * return������try������ɣ�����unlock()�󣬾ͼӲ����� lock��synchronized�ŵ㣺
-	 * synchronizedʧ�ܻ��׳��쳣��lock�׳������ܴ����쳣
+	 * return必须在try里面完成，否则unlock()后，就加不上锁 lock比synchronized优点：
+	 * synchronized失败会抛出异常，lock抛出后则能处理异常
 	 */
 	@Override
 	public int next() {

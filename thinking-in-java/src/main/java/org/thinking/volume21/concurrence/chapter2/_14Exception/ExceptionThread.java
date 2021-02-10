@@ -15,7 +15,7 @@ public class ExceptionThread implements Runnable {
 			ExecutorService exe=Executors.newCachedThreadPool();
 			exe.execute(new ExceptionThread());
 		} catch (Exception e) {
-			System.out.println("Cathch ���������ã�");
+			System.out.println("Cathch Exception");
 			e.printStackTrace();
 		}
 	}

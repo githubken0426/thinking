@@ -11,17 +11,18 @@ import java.util.concurrent.TimeUnit;
 
 public class TaskWithResult<V> implements Callable<V> {
 	private int id;
-	public TaskWithResult(int id){
-		this.id=id;
+
+	public TaskWithResult(int id) {
+		this.id = id;
 	}
-	
+
 	/**
 	 * 和run()方法区别是：call方法可以抛出异常
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public V call() throws Exception {
-		return (V) (Thread.currentThread()+":"+id);
+		return (V) (Thread.currentThread() + ":" + id);
 	}
 
 	/**
@@ -35,29 +36,29 @@ public class TaskWithResult<V> implements Callable<V> {
 	 * @throws ExecutionException
 	 */
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
-		ExecutorService exe=Executors.newCachedThreadPool();
-		List<Future<String>> list=new ArrayList<Future<String>>();
-		List<Future<?>> list2=new ArrayList<Future<?>>();
-		for(int i=0;i<5;i++){
-			//submit参数也可以为runnable类型，但是其返回值一直为null
-			Future<?> fl=exe.submit(new Runnable(){
+		ExecutorService exe = Executors.newCachedThreadPool();
+		List<Future<String>> list = new ArrayList<Future<String>>();
+		List<Future<?>> list2 = new ArrayList<Future<?>>();
+		for (int i = 0; i < 5; i++) {
+			// submit参数也可以为runnable类型，但是其返回值一直为null
+			Future<?> fl = exe.submit(new Runnable() {
 				@Override
 				public void run() {
-					System.out.println(Thread.currentThread()+"-"+this.getClass().getName());
+					System.out.println(Thread.currentThread() + "-" + this.getClass().getName());
 				}
 			});
 			list2.add(fl);
 			list.add(exe.submit(new TaskWithResult<String>(i)));
 		}
 		exe.shutdown();
-		for(Future<String> fs:list){
-			if(fs.isDone())
+		for (Future<String> fs : list) {
+			if (fs.isDone())
 				System.out.println(fs.get());
 			TimeUnit.SECONDS.sleep(2);
 		}
-		
-		for(Future<?> fs:list2){
-			System.out.println("返回值:"+fs.get());
+
+		for (Future<?> fs : list2) {
+			System.out.println("返回值:" + fs.get());
 		}
 	}
 }

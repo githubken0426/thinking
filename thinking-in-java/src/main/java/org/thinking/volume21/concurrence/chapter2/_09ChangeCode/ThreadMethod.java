@@ -26,8 +26,9 @@ public class ThreadMethod {
 					System.out.println("Interrupter");
 				}
 			}
-			public String toString(){
-				return getName()+":"+countDown;
+
+			public String toString() {
+				return getName() + ":" + countDown;
 			}
 		};
 		t.start();

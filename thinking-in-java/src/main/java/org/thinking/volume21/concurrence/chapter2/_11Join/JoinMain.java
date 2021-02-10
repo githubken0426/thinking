@@ -8,15 +8,16 @@ package org.thinking.volume21.concurrence.chapter2._11Join;
  */
 public class JoinMain {
 	public static void main(String[] args) {
-		Sleeper sleepy = new Sleeper("Sleepy", 6);
-		Joiner joiner = new Joiner("Joiner", sleepy);
-		sleepy.interrupt();
+		Sleeper sleeper = new Sleeper("Sleepy", 6);
+		Joiner joiner = new Joiner("Joiner", sleeper);
+
 
 		/**
 		 * Joiner调用interrupt()方法，等到调用join()对象执行完毕，Joiner才会被执行中断异常
 		 * Sleeper调用interrupt()方法, 可以看到只要调用interrupted()方法，均会执行中断异常
 		 */
-//		joiner.interrupt();
+//		sleeper.interrupt();
+		joiner.interrupt();
 
 //		Sleeper sleepy1=new Sleeper("Sleepy1",10);
 //		Joiner dopey=new Joiner("Joiner sleepy1",sleepy1);

@@ -18,7 +18,19 @@
 			<groupId>nu.xom</groupId>
 			<artifactId>com.springsource.nu.xom</artifactId>
 			<version>1.2.5</version>
-		</dependency> -->
-
+		</dependency> 
+		<dependency>
+		    <groupId>com.sun</groupId>
+		    <artifactId>tools</artifactId>
+		    <version>1.5.0</version>
+		    <scope>system</scope>
+		</dependency>
+		
+		<dependency>
+		    <groupId>javax.jnlp</groupId>
+		    <artifactId>jnlp</artifactId>
+		    <version>1.2</version>
+		</dependency>
+		-->
 	</dependencies>
 </project>

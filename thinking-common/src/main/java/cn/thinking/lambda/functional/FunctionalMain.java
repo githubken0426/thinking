@@ -17,5 +17,8 @@ public class FunctionalMain {
 		// print null,invoke functional,not J8SampleServiceImpl
 		j8Sample2.methodB("Test unit Two!");
 		System.out.println("**************************");
+		
+		j8Sample2 = item -> System.out.println(item);;
+		j8Sample2.methodB("Test unit Three!");
 	}
 }

@@ -10,6 +10,7 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
@@ -50,7 +51,9 @@ public class CommonFunsMain {
 		list.stream().map(value -> value + "_B") // 传入的是一个Function函数式接口
 				.filter(value -> value.length() > 2) //	传入的是一个Predicate函数式接口
 				.forEach(value -> System.out.println(value)); // 传入的是一个Consumer函数式接口
-
+		
+		list.stream().collect(Collectors.toList());
+		
 		System.out.println("*******************");
 		list.stream().map(function).filter(predicate).forEach(consumer);
 	}

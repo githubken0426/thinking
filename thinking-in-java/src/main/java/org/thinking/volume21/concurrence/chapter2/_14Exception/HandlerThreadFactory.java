@@ -8,7 +8,7 @@ public class HandlerThreadFactory implements ThreadFactory {
 	@Override
 	public Thread newThread(Runnable r) {
 		Thread t = new Thread(r);
-		System.out.println("Created " + t + " by��{" + this.getClass().getSimpleName() + "}");
+		System.out.println("Created " + t + " by {" + this.getClass().getSimpleName() + "}");
 		/**
 		 * setUncaughtExceptionHandler()方法传入一个Thread.UncaughtExceptionHandler对象
 		 * 只有在抛出异常时候，才会执行
@@ -19,7 +19,7 @@ public class HandlerThreadFactory implements ThreadFactory {
 				System.out.println("UncaughtExceptionHandler Throwable:[" + e + "] t.getName():[" + t.getName() + "]");
 			}
 		});
-		System.out.println("HandlerThreadFactory en��" + t.getUncaughtExceptionHandler());
+		System.out.println("HandlerThreadFactory ：" + t.getUncaughtExceptionHandler());
 		return t;
 	}
 

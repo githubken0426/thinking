@@ -1,11 +1,9 @@
 package org.thinking.volume21.concurrence.chapter2._11Join;
 
 public class CustomerJoiner extends Thread {
-	private CustomerThread customer;
 
-	public CustomerJoiner(CustomerThread customer) {
+	public CustomerJoiner() {
 		super("[CustomerJoiner]");
-		this.customer = customer;
 	}
 
 	public void run() {

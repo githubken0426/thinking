@@ -28,7 +28,7 @@ public class LiftOff implements Runnable {
 	}
 
 	@Override
-	public void run() {
+	public void run() throws RuntimeException {
 		while (countDown-- > 0) {
 			System.out.println(status());
 			/**
@@ -36,6 +36,7 @@ public class LiftOff implements Runnable {
 			 * 由cpu决定执行其他线程(包括自身线程)， 它只能让同优先级的线程有执行的机会
 			 */
 			Thread.yield();
+			throw new RuntimeException();
 		}
 	}
 

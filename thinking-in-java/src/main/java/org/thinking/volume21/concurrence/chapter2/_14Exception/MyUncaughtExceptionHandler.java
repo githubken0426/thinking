@@ -11,7 +11,7 @@ public class MyUncaughtExceptionHandler implements UncaughtExceptionHandler {
 
 	@Override
 	public void uncaughtException(Thread t, Throwable e) {
-		System.out.println("MyUncaughtExceptionHandler:["+e+"]t.getName():"+t.getName());
+		System.out.println("MyUncaughtExceptionHandler:[" + e + "]t.getName():" + t.getName());
 	}
 
 }

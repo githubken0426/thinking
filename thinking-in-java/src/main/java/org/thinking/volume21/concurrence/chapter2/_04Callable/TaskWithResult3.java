@@ -19,7 +19,10 @@ import java.util.concurrent.TimeUnit;
  */
 public class TaskWithResult3<V> implements Callable<V> {
 	private String id;
-	public TaskWithResult3() {}
+
+	public TaskWithResult3() {
+	}
+
 	public TaskWithResult3(String id) {
 		this.id = id;
 	}
@@ -42,21 +45,21 @@ public class TaskWithResult3<V> implements Callable<V> {
 		try {
 			System.out.println("method completionService()");
 			CompletionService<String> cs = new ExecutorCompletionService<String>(exe);
-			
-			for(int i=0;i<3;i++){
-				cs.submit(new TaskWithResult3<String>(i+""));
+
+			for (int i = 0; i < 3; i++) {
+				cs.submit(new TaskWithResult3<String>(i + ""));
 				Future<String> future = cs.poll();
-				if(future ==null)
+				if (future == null)
 					System.out.println("任务尚未完成！");
 				else
-					System.out.println("future.get():"+future.get());
+					System.out.println("future.get():" + future.get());
 				TimeUnit.SECONDS.sleep(3);
 			}
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		} catch (ExecutionException e) {
 			e.printStackTrace();
-		}finally{
+		} finally {
 			exe.shutdown();
 		}
 	}
