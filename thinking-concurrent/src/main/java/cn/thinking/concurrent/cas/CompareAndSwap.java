@@ -21,7 +21,7 @@ public class CompareAndSwap {
 	 * 3,ABA问题:如果在这段期间它的值曾经被改成了B，后来又被改回为A，那CAS操作就会误认为它从来没有被改变过。这个漏洞称为CAS操作的“ABA”问题。
 	 * Java并发包为了解决这个问题，提供了一个带有标记的原子引用类“AtomicStampedReference”，它可以通过控制变量值的版本来保证CAS的正确性。
 	   *       因此，在使用CAS前要考虑清楚“ABA”问题是否会影响程序并发的正确性，如果需要解决ABA问题，改用传统的互斥同步可能会比原子类更高效。
-	 * 
+	 * 	“ABA”从二进制上来看是依旧是 A， 但是其语义已经不是 A。
 	 * @return
 	 */
 	public final int getAndIncrement() {

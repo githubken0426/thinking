@@ -8,7 +8,7 @@ public class ThreadState {
 			@Override
 			public void run() {
 				synchronized (object) {
-					// 线程1在这里sleep是为了：
+					// 0.线程1在这里sleep是为了：
 					// 1.让主线程输出线程1或者线程2的TIMED_WAITING状态
 					// 2.让线程2保持BLOCKED状态，让主线程输出
 					try {
@@ -17,7 +17,7 @@ public class ThreadState {
 						e.printStackTrace();
 					}
 					try {
-						// 执行wait方法后，线程1进入WAITING状态，并且释放锁
+						// 0.执行wait方法后，线程1进入WAITING状态，并且释放锁
 						object.wait();
 					} catch (InterruptedException e) {
 						e.printStackTrace();
@@ -28,7 +28,7 @@ public class ThreadState {
 		Thread t2 = new Thread(new Runnable() {
 			@Override
 			public void run() {
-				// 线程2在这里sleep就是为了保证线程1先拿到锁
+				// 0.线程2在这里sleep就是为了保证线程1先拿到锁
 				try {
 					Thread.sleep(1000);
 				} catch (InterruptedException e) {
@@ -36,13 +36,13 @@ public class ThreadState {
 				}
 				
 				synchronized (object) {
-					// 线程2在这里sleep就是为了线程1保持WAITING的状态，让Main线程输出
+					// 0.线程2在这里sleep就是为了线程1保持WAITING的状态，让Main线程输出
 					try {
 						Thread.sleep(1000);
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
-					// 线程2唤醒线程1，两个线程都执行完
+					// 0.线程2唤醒线程1，两个线程都执行完
 					object.notifyAll();
 				}
 			}
@@ -99,9 +99,9 @@ public class ThreadState {
 		 */
 		System.out.println(Thread.State.RUNNABLE);
 		/**
-		 * Thread state for a thread blocked waiting for a monitor lock. A thread in the
-		 * blocked state is waiting for a monitor lock to enter a synchronized
-		 * block/method or reenter a synchronized block/method after calling
+		 * Thread state for a thread blocked waiting for a monitor lock.
+		 * A thread in the blocked state is waiting for a monitor lock to enter a synchronized block/method 
+		 * or reenter a synchronized block/method after calling
 		 * {@link Object#wait() Object.wait}.
 		 */
 		System.out.println(Thread.State.BLOCKED);
@@ -115,8 +115,7 @@ public class ThreadState {
 		 * </ul>
 		 *
 		 * <p>
-		 * A thread in the waiting state is waiting for another thread to perform a
-		 * particular action.
+		 * A thread in the waiting state is waiting for another thread to perform a particular action.
 		 *
 		 * For example, a thread that has called <tt>Object.wait()</tt> on an object is
 		 * waiting for another thread to call <tt>Object.notify()</tt> or

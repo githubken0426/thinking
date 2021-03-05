@@ -55,7 +55,7 @@ public class AttempLocking {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		// 检测一个线程是否拥有锁
+		//holdsLock()检测一个线程是否拥有锁
 		System.out.println("Thread.holdsLock(temp):" + Thread.holdsLock(temp));
 		Thread.yield();
 		temp.untimed();
