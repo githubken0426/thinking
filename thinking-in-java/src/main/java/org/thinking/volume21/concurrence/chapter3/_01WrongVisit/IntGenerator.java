@@ -12,4 +12,6 @@ public abstract class IntGenerator {
 	}
 
 	public abstract int next();
+	
+	public abstract int next3();
 }
