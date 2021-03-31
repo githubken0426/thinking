@@ -1,4 +1,4 @@
-package cn.thinking.jrmi;
+package cn.thinking.rmi;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
